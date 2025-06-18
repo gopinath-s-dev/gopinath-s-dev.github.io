@@ -1,0 +1,33 @@
+/* Skill bar animation fix */
+.skill-progress .skill-bar {
+  width: 0 !important;
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--skill-width, 0%);
+  }
+}
+
+/* Fix for certifications display in dark mode */
+.dark-mode .certifications {
+  background-color: var(--bg-dark);
+}
+
+.dark-mode .certifications .project-card {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.dark-mode .certifications .project-details h3 {
+  color: var(--text-dark);
+}
+
+.dark-mode .certifications .project-tech span {
+  background-color: rgba(67, 97, 238, 0.15);
+  color: var(--text-dark);
+}

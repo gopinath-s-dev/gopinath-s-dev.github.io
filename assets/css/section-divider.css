@@ -1,0 +1,133 @@
+/* About Section Background Styling and Section Divider */
+
+/* Base about section styling */
+.about {
+  position: relative;
+  overflow: hidden;
+  background: var(--about-bg);
+  transition: background 0.5s ease;
+  padding: 80px 0 100px;
+  margin-top: 0; /* Reset margin for new divider */
+}
+
+/* Light Theme */
+:root {
+  /* About section gradient background for light theme */
+  --about-bg-light: #f8faff;
+  --about-bg: var(--about-bg-light);
+  --divider-opacity: 0.9;
+}
+
+/* Dark Theme */
+body.dark-mode .about {
+  --about-bg-dark: #141834;
+  background: var(--about-bg-dark);
+  --divider-opacity: 0.7;
+}
+
+/* Create a sleek modern divider between hero and about sections */
+.hero-about-divider {
+  position: relative;
+  height: 2px;
+  background: transparent;
+  overflow: visible;
+  margin: 10px 0; /* Small margin for spacing */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* Create the divider line */
+.hero-about-divider::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary-color),
+    var(--secondary-color),
+    transparent
+  );
+  z-index: 5;
+}
+
+/* Add a decorative dot element in the center of the divider */
+.hero-about-divider::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--primary-color);
+  z-index: 6;
+}
+
+/* Pulse animation for the divider dot */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-about-divider::after {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Add decorative elements to the divider */
+.divider-decoration {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-decoration::before,
+.divider-decoration::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.divider-decoration::before {
+  transform: translateX(-15px);
+}
+
+.divider-decoration::after {
+  transform: translateX(15px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-about-divider {
+    padding: 20px 0;
+  }
+
+  .hero-about-divider::before {
+    width: 90%;
+  }
+
+  .hero-about-divider::after {
+    width: 8px;
+    height: 8px;
+  }
+}

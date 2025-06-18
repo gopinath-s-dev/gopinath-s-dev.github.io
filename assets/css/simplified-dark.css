@@ -1,0 +1,59 @@
+/* Simplified Dark Mode Styles */
+
+body.dark-mode {
+  /* Apply dark mode variables */
+  --bg-color: var(--bg-dark);
+  --text-color: var(--text-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --card-bg: var(--card-dark);
+  --border-color: var(--border-dark);
+  --shadow: var(--shadow-dark);
+
+  /* Dark mode specific styles */
+  background-color: var(--bg-dark);
+}
+
+/* Dark mode navbar when scrolled */
+body.dark-mode .navbar.scrolled {
+  background-color: var(--card-dark);
+}
+
+/* Dark mode skill tag styling */
+body.dark-mode .skill-tag {
+  background-color: rgba(58, 134, 255, 0.15);
+}
+
+body.dark-mode .skill-tag:hover {
+  background-color: var(--primary-color);
+}
+
+/* Dark mode for form elements */
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: var(--bg-dark);
+  border-color: var(--border-dark);
+  color: var(--text-dark);
+}
+
+/* Dark mode social items */
+body.dark-mode .social-item,
+body.dark-mode .footer-social a {
+  background-color: rgba(58, 134, 255, 0.15);
+}
+
+/* Error message styling for dark mode */
+body.dark-mode .error-message {
+  color: #ff6b6b;
+}
+
+/* Dark mode skill percentage fix to make it visible */
+body.dark-mode .skill-percentage {
+  color: #62b5ff; /* Lighter blue for better visibility in dark mode */
+}
+
+/* Dark mode transitions */
+body.dark-mode,
+body.dark-mode * {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gopinath S | Software Engineer</title>
+    <meta
+      name="description"
+      content="Gopinath S - Software Engineer specializing in Node.js, Vue.js, and MongoDB. View my portfolio, projects, and experience."
+    />
+    <meta
+      name="keywords"
+      content="software engineer, web developer, node.js, vue.js, mongodb, portfolio"
+    />    <!-- Stylesheets -->    <link rel="stylesheet" href="assets/css/simplified.css" />
+    <link rel="stylesheet" href="assets/css/simplified-dark.css" />
+    <link rel="stylesheet" href="assets/css/enhanced-styles.css" />
+    <link rel="stylesheet" href="assets/css/enhanced-styles-update.css" />
+    <link rel="stylesheet" href="assets/css/skill-fix.css" />
+    <link rel="stylesheet" href="assets/css/portfolio-fixes.css" />
+    <link rel="stylesheet" href="assets/css/final-fixes.css" />
+    <link rel="stylesheet" href="assets/css/animation-fix.css" />
+    <link rel="stylesheet" href="assets/css/ultimate-fix.css" />
+    <link rel="stylesheet" href="assets/css/final-enhancements.css" />    <link rel="stylesheet" href="assets/css/animation-overlap-fix.css" />    <link rel="stylesheet" href="assets/css/contact-redesign.css" />
+    <link rel="stylesheet" href="assets/css/hero-background.css" />
+    <link rel="stylesheet" href="assets/css/section-divider.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo">
+            <a href="#home">
+              <span class="logo-text">Gopinath S</span>
+              <span class="logo-dot"></span>
+            </a>
+          </div>
+          <div class="nav-links" id="navLinks">
+            <a href="#home" class="active-link">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="nav-actions">
+            <button
+              id="darkModeToggle"
+              class="dark-mode-toggle"
+              aria-label="Toggle Dark Mode"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <button
+              id="mobileMenuBtn"
+              class="mobile-menu-btn"
+              aria-label="Toggle Mobile Menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>    <main>      <!-- Hero Section - Enhanced with Profile Image -->
+      <section id="home" class="hero">
+        <!-- Background decorative elements -->
+        <div class="hero-bg-shape shape-1"></div>
+        <div class="hero-bg-shape shape-2"></div>
+        <div class="container">
+          <div class="hero-container">
+            <div class="hero-content">
+              <div
+                class="hero-intro"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                👋 Welcome to my portfolio
+              </div>
+              <h1 data-aos="fade-up" data-aos-delay="300">
+                Hi, I'm <span class="highlight">Gopinath S</span>
+              </h1>
+              <h2 data-aos="fade-up" data-aos-delay="400">
+                Software Engineer & Web Developer
+              </h2>
+              <p data-aos="fade-up" data-aos-delay="500">
+                Specializing in Node.js, Vue.js, and MongoDB with a focus on
+                performance optimization and scalable solutions
+              </p>
+              <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat-item">
+                  <span class="stat-count">2+</span>
+                  <span class="stat-label">Years of Experience</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-count">15+</span>
+                  <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-count">5+</span>
+                  <span class="stat-label">Certifications</span>
+                </div>
+              </div>
+              <div class="hero-cta" data-aos="fade-up" data-aos-delay="700">
+                <a href="#contact" class="primary-btn">
+                  <i class="fas fa-paper-plane"></i> Contact Me
+                </a>
+                <a href="#projects" class="secondary-btn">
+                  <i class="fas fa-laptop-code"></i> View My Work
+                </a>
+              </div>
+            </div>
+            <div
+              class="profile-image-container"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >              <img
+                src="assets/images/profile-image.jpg"
+                alt="Gopinath S - Software Engineer"
+                class="profile-image"
+              />
+              <div class="experience-badge">
+                <span class="years">2+</span>
+                <span class="text">Years<br />Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>      </section>
+      
+      <!-- Modern sleek divider between home and about sections -->
+      <div class="hero-about-divider">
+        <div class="divider-decoration"></div>
+      </div>
+      
+      <!-- About Section - Enhanced Design -->
+      <section id="about" class="about">
+        <div class="container">
+          <span class="section-subtitle" data-aos="fade-up"
+            >Get To Know Me</span
+          >
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
+            About Me
+          </h2>          <div class="about-content">
+            <div class="row" style="display: flex; flex-wrap: wrap">
+
+              <div class="col" style="flex: 1; min-width: 300px">
+                <div class="about-text">
+                  <div class="about-bio">
+                    <h3 data-aos="fade-up">
+                      Software Engineer & Web Developer
+                    </h3>
+                    <p data-aos="fade-up" data-aos-delay="200">
+                      Results-driven Software Engineer with 2+ years of
+                      experience in CRM/SaaS application development. Expert in
+                      Node.js, Vue.js, and MongoDB, with a strong record of
+                      optimizing performance, reducing costs, and ensuring data
+                      reliability.
+                    </p>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                      Skilled at delivering scalable, secure, and efficient web
+                      solutions using modern frameworks, caching, and real-time
+                      streaming technologies.
+                    </p>
+                    <div class="about-features">
+                      <div
+                        class="feature"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                      >
+                        <div class="feature-icon">
+                          <i class="fas fa-server"></i>
+                        </div>
+                        <div class="feature-text">
+                          <h4>Backend Development</h4>
+                          <p>Building robust, scalable server solutions</p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="feature"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                      >
+                        <div class="feature-icon">
+                          <i class="fas fa-code"></i>
+                        </div>
+                        <div class="feature-text">
+                          <h4>Frontend Solutions</h4>
+                          <p>Creating responsive, modern user interfaces</p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="feature"
+                        data-aos="fade-up"
+                        data-aos-delay="600"
+                      >
+                        <div class="feature-icon">
+                          <i class="fas fa-database"></i>
+                        </div>
+                        <div class="feature-text">
+                          <h4>Database Optimization</h4>
+                          <p>Expert in MongoDB and data structures</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="personal-info"
+                    data-aos="fade-up"
+                    data-aos-delay="700"
+                  >
+                    <div
+                      class="info-item"
+                      data-aos="fade-right"
+                      data-aos-delay="800"
+                    >
+                      <h3><i class="fas fa-id-card"></i> Contact</h3>
+                      <ul>
+                        <li>
+                          <i class="fas fa-envelope"></i>
+                          <a href="mailto:gopi3062.sss@gmail.com"
+                            >gopi3062.sss@gmail.com</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fas fa-phone"></i>
+                          <a href="tel:9025606345">9025606345</a>
+                        </li>
+                        <li>
+                          <i class="fas fa-map-marker-alt"></i> Chennai, TN
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="info-item"
+                      data-aos="fade-left"
+                      data-aos-delay="900"
+                    >
+                      <h3><i class="fas fa-share-alt"></i> Connect</h3>
+                      <ul>
+                        <li>
+                          <i class="fab fa-linkedin"></i>
+                          <a
+                            href="https://linkedin.com/in/gopinath-sss"
+                            target="_blank"
+                            >linkedin.com/in/gopinath-sss</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fab fa-github"></i>
+                          <a href="https://github.com/" target="_blank"
+                            >GitHub</a
+                          >
+                        </li>
+                        <li>
+                          <i class="fab fa-twitter"></i>
+                          <a href="https://twitter.com/" target="_blank"
+                            >Twitter</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="cta-container">
+                    <a
+                      href="assets/resume/Gopinath_S_Resume.pdf"
+                      download
+                      class="cta-btn"
+                    >
+                      <i class="fas fa-download"></i> Download Full Resume
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section - Keep Original Design -->
+      <section id="skills" class="skills">
+        <div class="container">
+          <span class="section-subtitle" data-aos="fade-up"
+            >What I Do Best</span
+          >
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
+            Technical Skills
+          </h2>
+          <div class="skills-header">
+            <div class="skills-text" data-aos="fade-up" data-aos-delay="300">
+              <p>
+                As a software engineer, I've developed expertise in various
+                technologies with a focus on creating performant, scalable web
+                applications.
+              </p>
+            </div>          </div>
+          <div class="skills-content">
+            <div class="skills-container">
+              <!-- First row with Frontend and Backend -->
+              <div class="skill-group">
+                <div class="skill-category frontend">
+                  <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                  <div class="skill-items">                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Vue.js</span>
+                        <span class="skill-percentage">90%</span>
+                      </div>                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="90%" style="--skill-width: 90%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="90%"></div>
+                      </div>
+                    </div>                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percentage">85%</span>
+                      </div>                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="85%" style="--skill-width: 85%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="85%"></div>
+                      </div>
+                    </div>                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Element Plus</span>
+                        <span class="skill-percentage">80%</span>
+                      </div>                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="80%" style="--skill-width: 80%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="80%"></div>
+                      </div>
+                    </div>                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">HTML/CSS</span>
+                        <span class="skill-percentage">85%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="85%" style="--skill-width: 85%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="85%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-category backend">
+                  <h3><i class="fas fa-server"></i> Backend</h3>
+                  <div class="skill-items">                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Node.js</span>
+                        <span class="skill-percentage">95%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="95%" style="--skill-width: 95%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="95%"></div>
+                      </div>
+                    </div>                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Koa.js</span>
+                        <span class="skill-percentage">85%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="85%" style="--skill-width: 85%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="85%"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Express.js</span>
+                        <span class="skill-percentage">90%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="90%" style="--skill-width: 90%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="90%"></div>
+                      </div>
+                    </div>                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">REST API</span>
+                        <span class="skill-percentage">95%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="95%" style="--skill-width: 95%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="95%"></div>
+                      </div>
+                    </div>
+                    <div class="skill-tags">
+                      <div class="skill-tag">gRPC</div>
+                      <div class="skill-tag">GraphQL</div>
+                      <div class="skill-tag">JWT</div>
+                      <div class="skill-tag">OAuth 2.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Second row with Database & Caching and Tools & DevOps -->
+              <div class="skill-group">
+                <div class="skill-category database">
+                  <h3><i class="fas fa-database"></i> Database & Caching</h3>
+                  <div class="skill-items">                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">MongoDB</span>
+                        <span class="skill-percentage">95%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="95%" style="--skill-width: 95%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="95%"></div>
+                      </div>
+                    </div>                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Atlas Search</span>
+                        <span class="skill-percentage">90%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="90%" style="--skill-width: 90%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="90%"></div>
+                      </div>
+                    </div>                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Indexing</span>
+                        <span class="skill-percentage">90%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="90%" style="--skill-width: 90%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="90%"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Redis</span>
+                        <span class="skill-percentage">80%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="80%" style="--skill-width: 80%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="80%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-category tools">
+                  <h3><i class="fas fa-project-diagram"></i> Tools & DevOps</h3>
+                  <div class="skill-items">
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Git & GitHub</span>
+                        <span class="skill-percentage">90%</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="skill-bar" style="--skill-width: 90%"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Docker</span>
+                        <span class="skill-percentage">75%</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="skill-bar" style="--skill-width: 75%"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Confluent Kafka</span>
+                        <span class="skill-percentage">75%</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="skill-bar" style="--skill-width: 75%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="other-skills">
+              <h3><i class="fas fa-layer-group"></i> Additional Skills</h3>
+              <div class="other-skills-content">
+                <div class="skill-tag">Agile</div>
+                <div class="skill-tag">SDLC</div>
+                <div class="skill-tag">Jira</div>
+                <div class="skill-tag">VS Code</div>
+                <div class="skill-tag">API Integration</div>
+                <div class="skill-tag">Performance Optimization</div>
+                <div class="skill-tag">Problem Solving</div>
+                <div class="skill-tag">Technical Documentation</div>
+                <div class="skill-tag">Team Leadership</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience Section - Simplified -->
+      <section id="experience" class="experience">
+        <div class="container">
+          <span class="section-subtitle" data-aos="fade-up"
+            >My Professional Journey</span
+          >
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
+            Professional Experience
+          </h2>
+
+          <div
+            class="experience-counter"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="counter-item">
+              <div class="counter-value" data-count="2">2+</div>
+              <div class="counter-label">Years of Experience</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-value" data-count="15">15+</div>
+              <div class="counter-label">Projects Delivered</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-value" data-count="99.99">99.99%</div>
+              <div class="counter-label">Uptime Achieved</div>
+            </div>
+          </div>
+          <div class="experience-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="experience-header">
+              <div class="experience-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="experience-title">
+                <h3>Software Engineer</h3>
+                <p class="company">
+                  <i class="fas fa-building"></i> Avow Solutions, Chennai, TN
+                </p>
+                <p class="date">
+                  <i class="fas fa-calendar-alt"></i> July 2022 - Present
+                </p>
+              </div>
+            </div>
+            <div class="experience-body">
+              <ul>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Reduced data loss by
+                  <span class="highlight-stat">95%</span> in the finance module
+                  by developing an audit logging system using MongoDB Change
+                  Stream.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Decreased average data retrieval time by
+                  <span class="highlight-stat">60%</span> by refactoring queries
+                  and adding indexes.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Migrated frontend from Vue 2 to Vue 3, increasing application
+                  speed by <span class="highlight-stat">30%</span> and improving
+                  maintainability.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Deployed gRPC server for JWT authentication, reducing
+                  authentication latency by
+                  <span class="highlight-stat">45%</span>.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Achieved <span class="highlight-stat">99.99%</span> audit log
+                  uptime by integrating MongoDB Change Stream with Confluent
+                  Kafka.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="experience-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="experience-header">
+              <div class="experience-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div class="experience-title">
+                <h3>Software Engineer Trainee</h3>
+                <p class="company">
+                  <i class="fas fa-building"></i> Avow Solutions, Chennai, TN
+                </p>
+                <p class="date">
+                  <i class="fas fa-calendar-alt"></i> December 2022 - June 2023
+                </p>
+              </div>
+            </div>
+            <div class="experience-body">
+              <ul>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Designed and developed a role-based Employee Management
+                  application using Vue.js, Node.js, Express, JWT, and MongoDB.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Built a web-based Gmail simulation app to demonstrate advanced
+                  UI/UX and backend integration.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Implemented MongoDB Change Stream for user document logs,
+                  enabling real-time data synchronization.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Integrated OAuth 2.0 via Passport.js, reducing user login time
+                  by <span class="highlight-stat">60%</span>.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>      <!-- Certifications Section - Simplified -->
+      <section id="certifications" class="certifications" style="display: block; visibility: visible; opacity: 1;">
+        <div class="container">
+          <span class="section-subtitle" data-aos="fade-up"
+            >Continuous Learning</span
+          >
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
+            Certifications
+          </h2>
+
+          <div class="certifications-container" style="display: block; visibility: visible; opacity: 1;">            <div
+              class="certifications-content"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; visibility: visible; opacity: 1;"
+            >
+              <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-details">
+                  <h3><i class="fas fa-database"></i> MongoDB Atlas Search</h3>
+                  <p><strong>Issuer:</strong> MongoDB University</p>
+                  <p><strong>Date:</strong> April 2022</p>
+                  <div class="project-tech">
+                    <span>Full-text Search</span>
+                    <span>Indexing</span>
+                  </div>
+                  <div class="certification-link">
+                    <a href="#" target="_blank"
+                      ><i class="fas fa-external-link-alt"></i> View
+                      Certificate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-details">
+                  <h3>
+                    <i class="fas fa-search"></i> Analyzers in Atlas Search
+                  </h3>
+                  <p><strong>Issuer:</strong> MongoDB University</p>
+                  <p><strong>Date:</strong> May 2022</p>
+                  <div class="project-tech">
+                    <span>Text Analysis</span>
+                    <span>Search Optimization</span>
+                  </div>
+                  <div class="certification-link">
+                    <a href="#" target="_blank"
+                      ><i class="fas fa-external-link-alt"></i> View
+                      Certificate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-details">
+                  <h3><i class="fas fa-sitemap"></i> MongoDB Indexes</h3>
+                  <p><strong>Issuer:</strong> MongoDB University</p>
+                  <p><strong>Date:</strong> June 2022</p>
+                  <div class="project-tech">
+                    <span>Performance Tuning</span>
+                    <span>Database Optimization</span>
+                  </div>
+                  <div class="certification-link">
+                    <a href="#" target="_blank"
+                      ><i class="fas fa-external-link-alt"></i> View
+                      Certificate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="project-details">
+                  <h3>
+                    <i class="fas fa-code-branch"></i> Advanced Queries with
+                    Atlas Search
+                  </h3>
+                  <p><strong>Issuer:</strong> MongoDB University</p>
+                  <p><strong>Date:</strong> July 2022</p>
+                  <div class="project-tech">
+                    <span>Complex Queries</span>
+                    <span>Data Retrieval</span>
+                  </div>
+                  <div class="certification-link">
+                    <a href="#" target="_blank"
+                      ><i class="fas fa-external-link-alt"></i> View
+                      Certificate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                <div class="project-details">
+                  <h3>
+                    <i class="fas fa-cogs"></i> Managing Atlas Search Indexes
+                  </h3>
+                  <p><strong>Issuer:</strong> MongoDB University</p>
+                  <p><strong>Date:</strong> August 2022</p>
+                  <div class="project-tech">
+                    <span>Index Management</span>
+                    <span>System Administration</span>
+                  </div>
+                  <div class="certification-link">
+                    <a href="#" target="_blank"
+                      ><i class="fas fa-external-link-alt"></i> View
+                      Certificate</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section - Redesigned with Categories -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <span class="section-subtitle" data-aos="fade-up"
+            >My Professional Work</span
+          >
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
+            Projects
+          </h2>
+
+          <!-- Current Project Category -->
+          <div class="category-heading" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-briefcase"></i> Current Project
+          </div>
+          <div class="projects-content">
+            <!-- CargoEZ - Current Project -->
+            <div
+              class="project-card current-project"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="project-details">
+                <h3>
+                  <span
+                    class="project-category"
+                    style="background: #3a86ff; color: #fff; margin-left: 5px"
+                    >Current Project</span
+                  >
+                  CargoEZ
+                </h3>
+                <p>
+                  A modern SaaS platform for logistics and cargo management,
+                  featuring real-time shipment tracking, automated billing, and
+                  advanced analytics dashboards. Built for scalability and
+                  seamless integration with third-party APIs.
+                </p>
+                <div class="project-tech">
+                  <span>Vue.js</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>MongoDB</span>
+                  <span>OAuth 2.0</span>
+                  <span>Kafka</span>
+                  <span>AJV</span>
+                  <span>Redis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Training Projects Category -->
+          <div class="category-heading" data-aos="fade-up">
+            <i class="fas fa-laptop-code"></i> Training Projects
+          </div>
+          <div class="projects-content">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="project-details">
+                <h3>Employee Management System</h3>
+                <p>
+                  A role-based application built during training that
+                  demonstrates HR process management capabilities including
+                  attendance tracking, performance reviews, and document
+                  management.
+                </p>
+                <div class="project-tech">
+                  <span>Vue.js</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>MongoDB</span>
+                  <span>JWT</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="project-details">
+                <h3>Gmail Simulation App</h3>
+                <p>
+                  A web application that replicates core Gmail functionality to
+                  demonstrate UI/UX skills and backend integration. Features
+                  include message threading, search, drafts, and categories.
+                </p>
+                <div class="project-tech">
+                  <span>Vue.js</span>
+                  <span>Vuex</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+              <div class="project-details">
+                <h3>Cargo Tracking Portal</h3>
+                <p>
+                  A shipment tracking portal with user authentication and
+                  real-time updates. Implemented OAuth 2.0 for streamlined login
+                  and MongoDB Change Streams for status updates.
+                </p>
+                <div class="project-tech">
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>Passport.js</span>
+                  <span>MongoDB</span>
+                  <span>OAuth 2.0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>      <!-- Contact Section - Modern Redesign -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <span class="section-subtitle" data-aos="fade-up">Let's Connect</span>
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
+            Get In Touch
+          </h2>
+          
+          <!-- Modern Contact Grid Layout -->
+          <div class="contact-grid">
+            <!-- Email Contact Card -->
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3>Email Me</h3>
+              <p class="contact-info">Feel free to reach out via email for work inquiries</p>
+              <a href="mailto:gopi3062.sss@gmail.com" class="contact-link">gopi3062.sss@gmail.com</a>
+            </div>
+            
+            <!-- Phone Contact Card -->
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <h3>Call Me</h3>
+              <p class="contact-info">Available for urgent discussions and collaborations</p>
+              <a href="tel:9025606345" class="contact-link">9025606345</a>
+            </div>
+            
+            <!-- Location Contact Card -->
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>My Location</h3>
+              <p class="contact-info">Based in vibrant tech hub of South India</p>
+              <p class="contact-link">Chennai, Tamil Nadu, India</p>
+            </div>
+          </div>
+          
+          <!-- Social Media Connect Section -->
+          <div class="social-connect" data-aos="fade-up" data-aos-delay="600">
+            <h3 class="social-title">Connect on Social Media</h3>
+            <div class="social-icons">
+              <a href="https://linkedin.com/in/gopinath-sss" class="social-icon" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/" class="social-icon" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://twitter.com/" class="social-icon" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://stackoverflow.com/" class="social-icon" target="_blank" aria-label="Stack Overflow">
+                <i class="fab fa-stack-overflow"></i>
+              </a>
+              <a href="https://dev.to/" class="social-icon" target="_blank" aria-label="Dev.to">
+                <i class="fab fa-dev"></i>
+              </a>
+            </div>
+            
+            <!-- Call to Action Buttons -->
+            <div class="contact-cta" data-aos="fade-up" data-aos-delay="700">
+              <a href="mailto:gopi3062.sss@gmail.com" class="cta-button primary-cta">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </a>
+              <a href="tel:9025606345" class="cta-button secondary-cta">
+                <i class="fas fa-phone"></i> Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">Gopinath S</div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://linkedin.com/in/gopinath-sss" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <p class="footer-copyright">
+            &copy; 2025 Gopinath S | All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>    <!-- AOS Animation Library -->    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>    <script src="components/SimpleDarkModeToggle.js"></script>
+    <script src="assets/js/simplified.js"></script>
+    <!-- Enhanced Portfolio Scripts -->
+    <script src="assets/js/enhanced-scripts.js"></script>
+    <!-- Ultimate Fix Script - This will fix skill animations and certifications -->
+    <script src="assets/js/ultimate-fix.js"></script>
+    <!-- Final percentage fix for skill bars and card width enhancements -->
+    <script src="assets/js/skill-percentage-fix.js"></script>
+    <!-- Fix for animation overlap between sections -->
+    <script src="assets/js/scroll-animation-fix.js"></script>
+  </body>
+</html>

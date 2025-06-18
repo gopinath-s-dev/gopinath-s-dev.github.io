@@ -1,0 +1,56 @@
+/* Fix for animation overlap between certification and projects section */
+
+/* Adjust the animation timing between sections */
+#certifications {
+  /* Add a tiny bit of padding to create more space between sections */
+  padding-bottom: 40px !important;
+}
+
+#projects {
+  /* Add a tiny bit of padding to ensure section doesn't start immediately */
+  padding-top: 40px !important;
+}
+
+/* Prevent instantaneous animation transitions between sections */
+#certifications [data-aos],
+#projects [data-aos] {
+  transition-duration: 800ms !important;
+}
+
+/* Ensure animation properly completes when quickly scrolling */
+#certifications .project-card.aos-animate,
+#projects .project-card.aos-animate {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* Fix visual spacing between sections */
+.projects .category-heading {
+  margin-bottom: 25px !important;
+}
+
+/* Give some margins to prevent overlapping animations */
+#certifications .section-title,
+#projects .section-title {
+  margin-bottom: 40px !important;
+}
+
+/* Adjust animation delays to reduce overlap */
+#certifications [data-aos-delay] {
+  transition-delay: 0ms !important;
+}
+
+/* Fix for mobile view to prevent animation overlaps */
+@media (max-width: 768px) {
+  #certifications,
+  #projects {
+    padding: 60px 0 !important;
+  }
+
+  #certifications [data-aos],
+  #projects [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
