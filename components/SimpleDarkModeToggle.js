@@ -1,34 +1,11 @@
-// Simple Dark Mode Toggle Functionality
-const darkModeToggle = document.getElementById("darkModeToggle");
+// Dark Mode Implementation - Dark Mode is now the default
+// The toggle button has been removed from the UI
+
 const body = document.body;
-const icon = darkModeToggle.querySelector("i");
 
-// Check for saved theme preference or use preferred color scheme
-const savedTheme = localStorage.getItem("theme");
-const prefersDark =
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+// Force dark mode as default regardless of system preference
+body.classList.add("dark-mode");
+localStorage.setItem("theme", "dark");
 
-// Apply saved theme or preferred color scheme
-if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-  body.classList.add("dark-mode");
-  icon.classList.remove("fa-moon");
-  icon.classList.add("fa-sun");
-}
-
-// Toggle dark mode on click
-darkModeToggle.addEventListener("click", () => {
-  // Toggle dark mode class
-  body.classList.toggle("dark-mode");
-
-  // Update icon and save preference
-  if (body.classList.contains("dark-mode")) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-    localStorage.setItem("theme", "dark");
-  } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
-    localStorage.setItem("theme", "light");
-  }
-});
+// Light theme code is still included in the CSS
+// This script now just ensures dark mode is always activated

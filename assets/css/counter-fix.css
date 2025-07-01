@@ -1,0 +1,35 @@
+/* Counter Symbol Fix Styles */
+
+/* Ensure plus and percentage symbols display correctly */
+.counter-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Added position relative */
+  width: 100%; /* Ensure container takes full width */
+}
+
+/* Ensure both spans stay together */
+.counter-value > span {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.counter-value .plus-symbol,
+.counter-value .percentage-symbol {
+  display: inline-block !important; /* Force display */
+  font-weight: 700;
+  margin-left: 2px;
+  line-height: 1;
+  visibility: visible !important; /* Ensure always visible */
+  opacity: 1 !important; /* Ensure always visible */
+  position: static; /* Prevent positioning issues */
+}
+
+/* Fix for mobile devices */
+@media (max-width: 768px) {
+  .counter-value .plus-symbol,
+  .counter-value .percentage-symbol {
+    font-size: 0.9em;
+  }
+}

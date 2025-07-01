@@ -1,0 +1,27 @@
+/* 
+ * Dark Mode Default CSS
+ * Forces dark mode as the default theme for the portfolio
+ */
+
+/* Ensure dark mode is applied even before JS loads */
+body {
+  --bg-color: var(--bg-dark);
+  --text-color: var(--text-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --card-bg: var(--card-dark);
+  --border-color: var(--border-dark);
+  --shadow: var(--shadow-dark);
+
+  /* Apply dark background immediately to prevent flash of light theme */
+  background-color: var(--bg-dark);
+}
+
+/* This ensures dark mode is consistently applied */
+html {
+  color-scheme: dark;
+}
+
+/* Hide any remaining light-mode specific elements that might be toggled */
+.dark-mode-toggle {
+  display: none !important;
+}

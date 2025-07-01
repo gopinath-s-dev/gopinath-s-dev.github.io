@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="canonical" href="https://gopinath-s.dev" /> -->
+    <link rel="icon" href="/assets/images/favicon.ico" />
+
     <title>Gopinath S | Software Engineer</title>
     <meta
       name="description"
@@ -13,6 +16,7 @@
       content="software engineer, web developer, node.js, vue.js, mongodb, portfolio"
     />    <!-- Stylesheets -->    <link rel="stylesheet" href="assets/css/simplified.css" />
     <link rel="stylesheet" href="assets/css/simplified-dark.css" />
+    <link rel="stylesheet" href="assets/css/dark-mode-default.css" />
     <link rel="stylesheet" href="assets/css/enhanced-styles.css" />
     <link rel="stylesheet" href="assets/css/enhanced-styles-update.css" />
     <link rel="stylesheet" href="assets/css/skill-fix.css" />
@@ -23,6 +27,13 @@
     <link rel="stylesheet" href="assets/css/final-enhancements.css" />    <link rel="stylesheet" href="assets/css/animation-overlap-fix.css" />    <link rel="stylesheet" href="assets/css/contact-redesign.css" />
     <link rel="stylesheet" href="assets/css/hero-background.css" />
     <link rel="stylesheet" href="assets/css/section-divider.css" />
+    <link rel="stylesheet" href="assets/css/resume.css" />
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css" />
+    <link rel="stylesheet" href="assets/css/project-highlights.css" />
+    <link rel="stylesheet" href="assets/css/skill-section-enhancement.css" />
+    <link rel="stylesheet" href="assets/css/overflow-fix.css" />
+    <link rel="stylesheet" href="assets/css/animated-title.css" />
+    <link rel="stylesheet" href="assets/css/counter-fix.css" />
 
     <!-- Font Awesome Icons -->
     <link
@@ -43,8 +54,36 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    
+    <!-- Modern Custom Cursor & Loader Styles -->
+    <link rel="stylesheet" href="assets/css/cursor-loader.css" />
   </head>
   <body>
+    <!-- Elegant Loading Screen -->
+    <div id="loader" aria-live="polite" aria-busy="true">
+      <div id="loader-content">
+        <svg id="loader-svg" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6c63ff" />
+              <stop offset="100%" stop-color="#cc5de8" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="30" stroke="url(#gradient)" stroke-width="8" fill="none" 
+                  stroke-dasharray="188.5" stroke-dashoffset="0" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="0" to="188.5" dur="1.5s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+        <div id="loader-text">Loading portfolio...</div>
+      </div>
+    </div>
+    
+    <!-- Modern Custom Cursor -->
+    <div id="cursor">
+      <div id="cursor-dot"></div>
+      <div id="cursor-ring"></div>
+    </div>
+    
     <!-- Navbar -->
     <header id="navbar" class="navbar">
       <div class="container">
@@ -65,21 +104,15 @@
             <a href="#contact">Contact</a>
           </div>
           <div class="nav-actions">
-            <button
-              id="darkModeToggle"
-              class="dark-mode-toggle"
-              aria-label="Toggle Dark Mode"
-            >
-              <i class="fas fa-moon"></i>
-            </button>
+            <!-- Dark mode toggle removed - dark mode is now default -->
             <button
               id="mobileMenuBtn"
               class="mobile-menu-btn"
               aria-label="Toggle Mobile Menu"
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <span class="menu-bar"></span>
+              <span class="menu-bar"></span>
+              <span class="menu-bar"></span>
             </button>
           </div>
         </nav>
@@ -102,9 +135,10 @@
               <h1 data-aos="fade-up" data-aos-delay="300">
                 Hi, I'm <span class="highlight">Gopinath S</span>
               </h1>
-              <h2 data-aos="fade-up" data-aos-delay="400">
-                Software Engineer & Web Developer
-              </h2>
+              <div id="animated-job-title" class="animated-title-container" data-aos="fade-up" data-aos-delay="400">
+                <!-- The animated job title will be inserted here by JavaScript -->
+                <span class="visually-hidden">Software Engineer and Web Developer</span>
+              </div>
               <p data-aos="fade-up" data-aos-delay="500">
                 Specializing in Node.js, Vue.js, and MongoDB with a focus on
                 performance optimization and scalable solutions
@@ -114,13 +148,13 @@
                   <span class="stat-count">2+</span>
                   <span class="stat-label">Years of Experience</span>
                 </div>
-                <div class="stat-item">
-                  <span class="stat-count">15+</span>
-                  <span class="stat-label">Projects Completed</span>
-                </div>
+
                 <div class="stat-item">
                   <span class="stat-count">5+</span>
                   <span class="stat-label">Certifications</span>
+                </div>
+                <div class="bug-fixes-badge" data-aos="fade-up" data-aos-delay="650">
+                  <i class="fas fa-bug"></i> 1000+ Bug Fixes
                 </div>
               </div>
               <div class="hero-cta" data-aos="fade-up" data-aos-delay="700">
@@ -264,14 +298,17 @@
                         <li>
                           <i class="fab fa-linkedin"></i>
                           <a
-                            href="https://linkedin.com/in/gopinath-sss"
+                            href="https://www.linkedin.com/in/gopinath-dev/"
                             target="_blank"
-                            >linkedin.com/in/gopinath-sss</a
+                            >
+                            LinkedIn
+                            <!-- linkedin.com/in/gopinath-dev -->
+                            </a
                           >
                         </li>
                         <li>
                           <i class="fab fa-github"></i>
-                          <a href="https://github.com/" target="_blank"
+                          <a href="https://github.com/gopinath-s-dev" target="_blank"
                             >GitHub</a
                           >
                         </li>
@@ -287,11 +324,12 @@
 
                   <div class="cta-container">
                     <a
-                      href="assets/resume/Gopinath_S_Resume.pdf"
+                      href="https://drive.google.com/file/d/1QhU2075UMWDa81MEFdzHTu4W2jWPcY83/view?usp=drive_link"
                       download
+                      target="_blank"
                       class="cta-btn"
                     >
-                      <i class="fas fa-download"></i> Download Full Resume
+                      <i class="fas fa-eye"></i> View Resume
                     </a>
                   </div>
                 </div>
@@ -300,6 +338,7 @@
           </div>
         </div>
       </section>
+      
       <!-- Skills Section - Keep Original Design -->
       <section id="skills" class="skills">
         <div class="container">
@@ -323,30 +362,57 @@
               <div class="skill-group">
                 <div class="skill-category frontend">
                   <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-                  <div class="skill-items">                    <div class="skill-item">
+                  <div class="skill-items">
+                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Vue.js</span>
+                        <span class="" data-tech="vue">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">Vue.js
+                        </span>
                         <span class="skill-percentage">90%</span>
-                      </div>                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                      </div>                      
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
                         <div class="skill-bar" data-width="90%" style="--skill-width: 90%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="90%"></div>
                       </div>
-                    </div>                    <div class="skill-item">
+                    </div>
+                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">JavaScript</span>
+                        <span class="" data-tech="javascript">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">JavaScript (ES6+)
+                        </span>
                         <span class="skill-percentage">85%</span>
-                      </div>                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                      </div>                      
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
                         <div class="skill-bar" data-width="85%" style="--skill-width: 85%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="85%"></div>
                       </div>
-                    </div>                    <div class="skill-item">
+                    </div>
+                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Element Plus</span>
+                        <span class="" data-tech="typescript">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">TypeScript
+                        </span>
                         <span class="skill-percentage">80%</span>
-                      </div>                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
                         <div class="skill-bar" data-width="80%" style="--skill-width: 80%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="80%"></div>
                       </div>
-                    </div>                    <div class="skill-item">
+                    </div>
+                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">HTML/CSS</span>
+                        <span class="" data-tech="element-plus">
+                          <img class="skill-icon" src="https://element-plus.org/images/element-plus-logo.svg" alt="Element Plus" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">Element Plus
+                        </span>
+                        <span class="skill-percentage">80%</span>
+                      </div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="80%" style="--skill-width: 80%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="80%"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="" data-tech="html-css">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="height:22px;width:22px;padding-right:3px;vertical-align:middle;">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">HTML/CSS
+                        </span>
                         <span class="skill-percentage">85%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
@@ -358,17 +424,23 @@
                 
                 <div class="skill-category backend">
                   <h3><i class="fas fa-server"></i> Backend</h3>
-                  <div class="skill-items">                    <div class="skill-item">
+                  <div class="skill-items">
+                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Node.js</span>
+                        <span class="" data-tech="node">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">Node.js
+                        </span>
                         <span class="skill-percentage">95%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
                         <div class="skill-bar" data-width="95%" style="--skill-width: 95%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="95%"></div>
                       </div>
-                    </div>                    <div class="skill-item">
+                    </div>
+                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Koa.js</span>
+                        <span class="" data-tech="koa">
+                          Koa.js
+                        </span>
                         <span class="skill-percentage">85%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
@@ -377,26 +449,41 @@
                     </div>
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Express.js</span>
+                        <span class="" data-tech="express">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;filter:invert(0.7);">Express.js
+                        </span>
                         <span class="skill-percentage">90%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
                         <div class="skill-bar" data-width="90%" style="--skill-width: 90%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="90%"></div>
                       </div>
-                    </div>                    <div class="skill-item">
+                    </div>
+                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">REST API</span>
+                        <span class="" data-tech="rest-api">
+                          REST API
+                        </span>
                         <span class="skill-percentage">95%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
                         <div class="skill-bar" data-width="95%" style="--skill-width: 95%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="95%"></div>
                       </div>
-                    </div>
-                    <div class="skill-tags">
-                      <div class="skill-tag">gRPC</div>
-                      <div class="skill-tag">GraphQL</div>
-                      <div class="skill-tag">JWT</div>
-                      <div class="skill-tag">OAuth 2.0</div>
+                    </div>                    <div class="skill-tags">
+                      <div class="" data-tech="go">
+                        Go
+                      </div>
+                      <div class="" data-tech="gRPC">
+                        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg" alt="gRPC" />gRPC
+                      </div>
+                      <div class="" data-tech="GraphQL">
+                        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL" />GraphQL
+                      </div>
+                      <div class="" data-tech="JWT">
+                        JWT
+                      </div>
+                      <div class="" data-tech="OAuth 2.0">
+                        <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg" alt="OAuth 2.0" />OAuth 2.0
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -406,9 +493,12 @@
               <div class="skill-group">
                 <div class="skill-category database">
                   <h3><i class="fas fa-database"></i> Database & Caching</h3>
-                  <div class="skill-items">                    <div class="skill-item">
+                  <div class="skill-items">                    
+                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">MongoDB</span>
+                        <span class="" data-tech="mongodb">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">MongoDB
+                        </span>
                         <span class="skill-percentage">95%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
@@ -416,7 +506,9 @@
                       </div>
                     </div>                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Atlas Search</span>
+                        <span class="skill-name" data-tech="atlas">
+                          Atlas Search
+                        </span>
                         <span class="skill-percentage">90%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
@@ -424,7 +516,9 @@
                       </div>
                     </div>                    <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Indexing</span>
+                        <span class="skill-name" data-tech="indexing">
+                          Indexing
+                        </span>
                         <span class="skill-percentage">90%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
@@ -433,7 +527,9 @@
                     </div>
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Redis</span>
+                        <span class="" data-tech="redis">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">Redis
+                        </span>
                         <span class="skill-percentage">80%</span>
                       </div>
                       <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
@@ -448,49 +544,59 @@
                   <div class="skill-items">
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Git & GitHub</span>
+                        <span class="" data-tech="git">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="height:22px;width:22px;padding-right:3px;vertical-align:middle;">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">Git & GitHub
+                        </span>
                         <span class="skill-percentage">90%</span>
                       </div>
-                      <div class="skill-progress">
-                        <div class="skill-bar" style="--skill-width: 90%"></div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="90%" style="--skill-width: 90%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="90%"></div>
                       </div>
                     </div>
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Docker</span>
+                        <span class="" data-tech="docker">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">Docker
+                        </span>
                         <span class="skill-percentage">75%</span>
                       </div>
-                      <div class="skill-progress">
-                        <div class="skill-bar" style="--skill-width: 75%"></div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="75%" style="--skill-width: 75%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="75%"></div>
                       </div>
                     </div>
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Confluent Kafka</span>
+                        <span class="" data-tech="kafka">
+                          <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Confluent Kafka" style="height:22px;width:22px;padding-right:6px;vertical-align:middle;">Confluent Kafka
+                        </span>
                         <span class="skill-percentage">75%</span>
                       </div>
-                      <div class="skill-progress">
-                        <div class="skill-bar" style="--skill-width: 75%"></div>
+                      <div class="skill-progress" style="height: 6px; background-color: rgba(58, 134, 255, 0.15); border-radius: 10px; overflow: hidden; position: relative;">
+                        <div class="skill-bar" data-width="75%" style="--skill-width: 75%; width: 0; height: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; position: absolute; top: 0; left: 0;" data-target-width="75%"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-            <div class="other-skills">
-              <h3><i class="fas fa-layer-group"></i> Additional Skills</h3>
-              <div class="other-skills-content">
-                <div class="skill-tag">Agile</div>
-                <div class="skill-tag">SDLC</div>
-                <div class="skill-tag">Jira</div>
-                <div class="skill-tag">VS Code</div>
-                <div class="skill-tag">API Integration</div>
-                <div class="skill-tag">Performance Optimization</div>
-                <div class="skill-tag">Problem Solving</div>
-                <div class="skill-tag">Technical Documentation</div>
-                <div class="skill-tag">Team Leadership</div>
+              <div class="other-skills">
+                <h3><i class="fas fa-layer-group"></i> Additional Skills</h3>
+                <div class="other-skills-content">
+                  <div class="skill-tag">Server Caching</div>
+                  <div class="skill-tag">Client Caching</div>
+                  <div class="skill-tag">Agile</div>
+                  <div class="skill-tag">SDLC</div>
+                  <div class="skill-tag">Jira</div>
+                  <div class="skill-tag">VS Code</div>
+                  <div class="skill-tag">API Integration</div>
+                  <div class="skill-tag">Performance Optimization</div>
+                  <div class="skill-tag">Problem Solving</div>
+                  <div class="skill-tag">Technical Documentation</div>
+                  <div class="skill-tag">Team Leadership</div>
+                </div>
               </div>
-            </div>
+
+            <!-- Additional Skills section removed -->
           </div>
         </div>
       </section>
@@ -510,15 +616,15 @@
             data-aos-delay="300"
           >
             <div class="counter-item">
-              <div class="counter-value" data-count="2">2+</div>
+              <div class="counter-value" data-count="2"><span>2</span><span class="plus-symbol">+</span></div>
               <div class="counter-label">Years of Experience</div>
             </div>
             <div class="counter-item">
-              <div class="counter-value" data-count="15">15+</div>
-              <div class="counter-label">Projects Delivered</div>
+              <div class="counter-value" data-count="1000"><span>1000</span><span class="plus-symbol">+</span></div>
+              <div class="counter-label">Bugs Fixed</div>
             </div>
             <div class="counter-item">
-              <div class="counter-value" data-count="99.99">99.99%</div>
+              <div class="counter-value" data-count="99.99"><span>99.99</span><span class="percentage-symbol">%</span></div>
               <div class="counter-label">Uptime Achieved</div>
             </div>
           </div>
@@ -533,7 +639,7 @@
                   <i class="fas fa-building"></i> Avow Solutions, Chennai, TN
                 </p>
                 <p class="date">
-                  <i class="fas fa-calendar-alt"></i> July 2022 - Present
+                  <i class="fas fa-calendar-alt"></i> July 2023 - Present
                 </p>
               </div>
             </div>
@@ -541,34 +647,49 @@
               <ul>
                 <li>
                   <i class="fas fa-check-circle"></i>
-                  Reduced data loss by
-                  <span class="highlight-stat">95%</span> in the finance module
-                  by developing an audit logging system using MongoDB Change
-                  Stream.
+                  Built an audit log system with MongoDB Change Stream, reducing finance module data loss by
+                  <span class="highlight-stat">95%</span> and improving compliance.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Engineered a gRPC server for JWT authentication, lowering latency by
+                  <span class="highlight-stat">45%</span> and strengthening microservices security.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Maintained <span class="highlight-stat">99.99%</span> audit log uptime by streaming MongoDB Change Stream data to Confluent Kafka.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Integrated MongoDB Atlas Search to speed up transaction data retrieval, helping analysts resolve issues <span class="highlight-stat">50%</span> faster.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Led a team of four developers to migrate the frontend from Vue 2 to Vue 3, resulting in a <span class="highlight-stat">30%</span> improvement in application speed and enabling smoother future upgrades.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Created <span class="highlight-stat">Atlas Search</span>  Indexes and moved schemas to AJV, improving data validation and cutting errors by 40%.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Improved efficiency with <span class="highlight-stat">Vue TanStack Query</span>  (client caching) and <span class="highlight-stat">Redis</span> (server caching), reducing redundant data
+                  fetches.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Set up a  <span class="highlight-stat">local Atlas deployment</span> in MongoDB to improve development workflows and support high-availability and
+                  disaster recovery testing for cloud-based applications.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Led a team of six developers to upgrade backend servers from Node.js v14 to v21, resulting in a 25% performance improvement and enabling the use of new platform features.
                 </li>
                 <li>
                   <i class="fas fa-check-circle"></i>
                   Decreased average data retrieval time by
                   <span class="highlight-stat">60%</span> by refactoring queries
                   and adding indexes.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  Migrated frontend from Vue 2 to Vue 3, increasing application
-                  speed by <span class="highlight-stat">30%</span> and improving
-                  maintainability.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  Deployed gRPC server for JWT authentication, reducing
-                  authentication latency by
-                  <span class="highlight-stat">45%</span>.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  Achieved <span class="highlight-stat">99.99%</span> audit log
-                  uptime by integrating MongoDB Change Stream with Confluent
-                  Kafka.
                 </li>
               </ul>
             </div>
@@ -592,23 +713,20 @@
               <ul>
                 <li>
                   <i class="fas fa-check-circle"></i>
-                  Designed and developed a role-based Employee Management
-                  application using Vue.js, Node.js, Express, JWT, and MongoDB.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  Built a web-based Gmail simulation app to demonstrate advanced
-                  UI/UX and backend integration.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  Implemented MongoDB Change Stream for user document logs,
-                  enabling real-time data synchronization.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  Integrated OAuth 2.0 via Passport.js, reducing user login time
+                  Integrated OAuth 2.0 (Google, Microsoft, Facebook) with Passport.js for CargoEZ, cutting user login time
                   by <span class="highlight-stat">60%</span>.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Developed a role-based Employee Management app using Vue.js, Node.js, JWT, and MongoDB.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Minimized data loss by <span class="highlight-stat">40%</span> by setting up MongoDB Change Stream for user logs, enabling live data sync across platforms.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Utilized technologies like Vue.js and Element Plus to build a Gmail simulation application.
                 </li>
               </ul>
             </div>
@@ -634,10 +752,11 @@
                 <div class="project-details">
                   <h3><i class="fas fa-database"></i> MongoDB Atlas Search</h3>
                   <p><strong>Issuer:</strong> MongoDB University</p>
-                  <p><strong>Date:</strong> April 2022</p>
+                  <p><strong>Date:</strong> April 2023</p>
                   <div class="project-tech">
                     <span>Full-text Search</span>
                     <span>Indexing</span>
+                    <span>MongoDB</span>
                   </div>
                   <div class="certification-link">
                     <a href="#" target="_blank"
@@ -650,13 +769,14 @@
               <div class="project-card" data-aos="fade-up" data-aos-delay="500">
                 <div class="project-details">
                   <h3>
-                    <i class="fas fa-search"></i> Analyzers in Atlas Search
+                    <i class="fas fa-code-branch"></i> Advanced Queries with Atlas Search
                   </h3>
                   <p><strong>Issuer:</strong> MongoDB University</p>
-                  <p><strong>Date:</strong> May 2022</p>
+                  <p><strong>Date:</strong> May 2023</p>
                   <div class="project-tech">
-                    <span>Text Analysis</span>
-                    <span>Search Optimization</span>
+                    <span>Complex Queries</span>
+                    <span>Facets</span>
+                    <span>Text Search</span>
                   </div>
                   <div class="certification-link">
                     <a href="#" target="_blank"
@@ -668,12 +788,13 @@
               </div>
               <div class="project-card" data-aos="fade-up" data-aos-delay="600">
                 <div class="project-details">
-                  <h3><i class="fas fa-sitemap"></i> MongoDB Indexes</h3>
+                  <h3><i class="fas fa-cogs"></i> Managing Atlas Search Indexes</h3>
                   <p><strong>Issuer:</strong> MongoDB University</p>
-                  <p><strong>Date:</strong> June 2022</p>
+                  <p><strong>Date:</strong> June 2023</p>
                   <div class="project-tech">
+                    <span>Index Management</span>
                     <span>Performance Tuning</span>
-                    <span>Database Optimization</span>
+                    <span>Search Optimization</span>
                   </div>
                   <div class="certification-link">
                     <a href="#" target="_blank"
@@ -749,19 +870,16 @@
             >
               <div class="project-details">
                 <h3>
-                  <span
-                    class="project-category"
-                    style="background: #3a86ff; color: #fff; margin-left: 5px"
-                    >Current Project</span
-                  >
                   CargoEZ
                 </h3>
                 <p>
-                  A modern SaaS platform for logistics and cargo management,
-                  featuring real-time shipment tracking, automated billing, and
-                  advanced analytics dashboards. Built for scalability and
-                  seamless integration with third-party APIs.
+                  A modern SaaS platform for logistics and cargo management with enhanced security and performance features:
                 </p>
+                <ul class="project-highlights">
+                  <li><i class="fas fa-check-circle"></i> Designed and implemented authentication and role-based access using Node.js, JWT, OAuth 2.0, and Passport.js, improving user security and access control.</li>
+                  <li><i class="fas fa-check-circle"></i> Integrated MongoDB, Redis, and Confluent Kafka to enable real-time data processing and reporting, supporting seamless operations for logistics teams.</li>
+                  <li><i class="fas fa-check-circle"></i> Led migration to Vue.js 3 and optimized REST API endpoints, increasing application speed by 30% and reducing support tickets related to latency.</li>
+                </ul>
                 <div class="project-tech">
                   <span>Vue.js</span>
                   <span>Node.js</span>
@@ -879,20 +997,11 @@
           <div class="social-connect" data-aos="fade-up" data-aos-delay="600">
             <h3 class="social-title">Connect on Social Media</h3>
             <div class="social-icons">
-              <a href="https://linkedin.com/in/gopinath-sss" class="social-icon" target="_blank" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/gopinath-dev" class="social-icon" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
               </a>
-              <a href="https://github.com/" class="social-icon" target="_blank" aria-label="GitHub">
+              <a href="https://github.com/gopinath-s-dev" class="social-icon" target="_blank" aria-label="GitHub">
                 <i class="fab fa-github"></i>
-              </a>
-              <a href="https://twitter.com/" class="social-icon" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="https://stackoverflow.com/" class="social-icon" target="_blank" aria-label="Stack Overflow">
-                <i class="fab fa-stack-overflow"></i>
-              </a>
-              <a href="https://dev.to/" class="social-icon" target="_blank" aria-label="Dev.to">
-                <i class="fab fa-dev"></i>
               </a>
             </div>
             
@@ -920,18 +1029,16 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
+            <a href="#certifications">Certifications</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </div>
           <div class="footer-social">
-            <a href="https://linkedin.com/in/gopinath-sss" target="_blank">
+            <a href="https://www.linkedin.com/in/gopinath-dev/" target="_blank">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/" target="_blank">
+            <a href="https://github.com/gopinath-s-dev" target="_blank">
               <i class="fab fa-github"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-              <i class="fab fa-twitter"></i>
             </a>
           </div>
           <p class="footer-copyright">
@@ -949,5 +1056,41 @@
     <script src="assets/js/skill-percentage-fix.js"></script>
     <!-- Fix for animation overlap between sections -->
     <script src="assets/js/scroll-animation-fix.js"></script>
+    <!-- Mobile Menu Toggle Script -->
+    <script src="assets/js/mobile-menu.js"></script>
+    <!-- Skill Style Cleanup -->
+    <script src="assets/js/skill-style-cleanup.js"></script>
+    <!-- Animated Job Title Script -->
+    <script src="assets/js/animated-title.js"></script>
+    <style>
+      /* Fix all skill icon sizes for consistency */
+      .skill-icon {
+        height: 24px !important;
+        width: 24px !important;
+        min-width: 24px !important;
+        min-height: 24px !important;
+        max-width: 24px !important;
+        max-height: 24px !important;
+        padding-right: 6px;
+        vertical-align: middle;
+        object-fit: contain;
+        display: inline-block;
+      }
+      .skill-tag .skill-icon {
+        height: 22px !important;
+        width: 22px !important;
+        min-width: 22px !important;
+        min-height: 22px !important;
+        max-width: 22px !important;
+        max-height: 22px !important;
+        padding-right: 6px;
+        vertical-align: middle;
+        object-fit: contain;
+        display: inline-block;
+      }
+    </style>
+    
+    <!-- Modern Custom Cursor & Loader Script -->
+    <script src="assets/js/cursor-loader.js"></script>
   </body>
 </html>

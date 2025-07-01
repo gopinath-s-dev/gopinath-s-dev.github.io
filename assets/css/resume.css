@@ -1,0 +1,718 @@
+/* Resume Section Styles */
+.resume {
+  padding: 100px 0;
+  background-color: var(--section-bg);
+  position: relative;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.resume-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+.resume-personal {
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.resume-personal h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.resume-personal p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.resume-contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.resume-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resume-contact-link:hover {
+  color: var(--secondary-color);
+}
+
+.resume-section {
+  margin-bottom: 30px;
+}
+
+.resume-section-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resume-section-title i {
+  color: var(--primary-color);
+}
+
+.resume-summary {
+  margin-bottom: 30px;
+}
+
+.resume-summary p {
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.skills-category {
+  margin-bottom: 10px;
+}
+
+.skills-category h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--heading-color);
+}
+
+.skills-category h4 i {
+  color: var(--primary-color);
+}
+
+.skills-category p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.experience-item {
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.experience-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background: rgba(58, 134, 255, 0.1);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.experience-title {
+  flex-grow: 1;
+}
+
+.experience-title h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: var(--heading-color);
+}
+
+.company,
+.date {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.company i,
+.date i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.experience-body {
+  width: 100%;
+}
+
+.experience-body ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.experience-body li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 15px;
+  line-height: 1.7;
+  word-wrap: break-word;
+}
+
+.experience-body li i {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color: var(--primary-color);
+}
+
+.highlight-stat {
+  color: var(--primary-color);
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.experience-counter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.counter-item {
+  text-align: center;
+  padding: 15px 20px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  min-width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.counter-item:hover {
+  transform: translateY(-5px);
+}
+
+.counter-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.counter-label {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* Resume section divider */
+.resume:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
+}
+
+/* Stats badge */
+.bug-fixes-badge {
+  display: inline-flex;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 15px 5px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.2);
+  align-items: center;
+  gap: 8px;
+}
+
+.bug-fixes-badge i {
+  font-size: 1.2em;
+}
+
+/* Hero section specific styling */
+.hero .bug-fixes-badge {
+  display: inline-flex;
+  margin: 10px auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero .bug-fixes-badge:hover {
+  transform: scale(1.05);
+}
+
+/* Consistent Experience Styling */
+#experience .experience-item,
+#resume .experience-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fix for long content on small screens */
+@media screen and (max-width: 768px) {
+  .experience-body {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .experience-body li {
+    margin-bottom: 20px;
+  }
+
+  .experience-body .highlight-stat {
+    display: inline;
+  }
+}
+
+/* Fix for the counter section on smaller screens */
+@media screen and (max-width: 576px) {
+  .experience-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .counter-item {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resume-content {
+    padding: 20px;
+  }
+
+  .resume-contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-title {
+    flex-direction: column;
+  }
+
+  .experience-date {
+    margin-top: 5px;
+  }
+
+  .resume-section-title {
+    font-size: 18px;
+  }
+
+  .project-title h3 {
+    font-size: 16px;
+  }
+
+  .experience-counter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter-item {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .experience-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .experience-body li {
+    padding-left: 25px;
+    font-size: 15px;
+  }
+
+  .experience-body li i {
+    top: 3px;
+  }
+
+  .company,
+  .date {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resume-content {
+    padding: 15px;
+    margin: 0 10px;
+  }
+
+  .resume-personal h3 {
+    font-size: 22px;
+  }
+
+  .resume-section-title {
+    font-size: 16px;
+  }
+
+  .experience-body li,
+  .project-body li,
+  .project-highlights li {
+    font-size: 14px;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experience-icon {
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .experience-title h3 {
+    font-size: 18px;
+  }
+
+  .experience-item {
+    padding: 20px 15px;
+  }
+
+  .counter-item {
+    padding: 12px;
+  }
+
+  .counter-value {
+    font-size: 28px;
+  }
+
+  .counter-label {
+    font-size: 14px;
+  }
+
+  .highlight-stat {
+    display: inline-block;
+  }
+
+  .experience-body li i {
+    top: 2px;
+    font-size: 12px;
+  }
+
+  .company,
+  .date {
+    font-size: 13px;
+  }
+}
+
+/* Additional Experience Alignment Fixes */
+.experience {
+  overflow-x: hidden;
+}
+
+.experience-icon i {
+  position: relative;
+  top: 1px;
+}
+
+/* Ensure proper spacing between list items */
+.experience-body li:last-child {
+  margin-bottom: 0;
+}
+
+/* Fix for resume experience section */
+#resume .experience-item {
+  padding: 25px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* Skill name with icons */
+.skill-name {
+  position: relative;
+  padding-left: 28px; /* Increased padding to accommodate icon */
+  display: inline-block;
+}
+
+.skill-name::before {
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands", sans-serif;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+/* --- Accurate Skill Icon Mapping --- */
+
+/* Frontend */
+.skill-name[data-tech="vue"]::before {
+  content: "\f41f";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  color: #42b883;
+}
+.skill-name[data-tech="javascript"]::before {
+  content: "\f3b9";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  color: #f7df1e;
+}
+.skill-name[data-tech="typescript"]::before {
+  content: "\f1c9";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #3178c6;
+}
+.skill-name[data-tech="element-plus"]::before {
+  content: "\f5fd";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #409eff;
+}
+.skill-name[data-tech="html-css"]::before {
+  content: "\f13b";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  color: #e34c26;
+}
+
+/* Backend */
+.skill-name[data-tech="node"]::before {
+  content: "\f3d3";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  color: #68a063;
+}
+.skill-name[data-tech="koa"]::before {
+  content: "\f06c";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #4db33d;
+}
+.skill-name[data-tech="express"]::before {
+  content: "\f121";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #353535;
+}
+.skill-name[data-tech="rest-api"]::before {
+  content: "\f1e6";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #ff6c37;
+}
+
+/* Backend Tags */
+.skill-tag[data-tech="gRPC"]::before {
+  content: "\f6ff";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #244c5a;
+}
+.skill-tag[data-tech="GraphQL"]::before {
+  content: "\f542";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #e535ab;
+}
+.skill-tag[data-tech="JWT"]::before {
+  content: "\f084";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #00b9f1;
+}
+.skill-tag[data-tech="OAuth 2.0"]::before {
+  content: "\f13e";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #2da44e;
+}
+
+/* Database & Caching */
+.skill-name[data-tech="mongodb"]::before {
+  content: "\f06c";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #4db33d;
+}
+.skill-name[data-tech="redis"]::before {
+  content: "\f1c0";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #dc382d;
+}
+.skill-name[data-tech="atlas"]::before {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #4db33d;
+}
+.skill-name[data-tech="indexing"]::before {
+  content: "\f0cb";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #4db33d;
+}
+
+/* Tools & DevOps */
+.skill-name[data-tech="git"]::before {
+  content: "\f841";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  color: #f05033;
+}
+.skill-name[data-tech="docker"]::before {
+  content: "\f395";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  color: #2496ed;
+}
+.skill-name[data-tech="kafka"]::before {
+  content: "\f550";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #000000;
+}
+.skill-name[data-tech="go"]::before {
+  content: "\f085";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #00add8;
+}
+
+/* Other Skills (Tags) */
+.skill-tag[data-tech="agile"]::before {
+  content: "\f0e7";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #0078d7;
+}
+.skill-tag[data-tech="sdlc"]::before {
+  content: "\f542";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #6e56cf;
+}
+.skill-tag[data-tech="jira"]::before {
+  content: "\f7b1";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  color: #0052cc;
+}
+.skill-tag[data-tech="azure"]::before {
+  content: "\f3ca";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  color: #0078d4;
+}
+.skill-tag[data-tech="vscode"]::before {
+  content: "\f121";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #007acc;
+}
+.skill-tag[data-tech="api"]::before {
+  content: "\f1e6";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #ff6c37;
+}
+.skill-tag[data-tech="perf"]::before {
+  content: "\f3fd";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #00b4ff;
+}
+.skill-tag[data-tech="server-cache"]::before {
+  content: "\f233";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #6cb2eb;
+}
+.skill-tag[data-tech="client-cache"]::before {
+  content: "\f108";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #6cb2eb;
+}
+.skill-tag[data-tech="tanstack"]::before {
+  content: "\f1c0";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #ff4154;
+}
+.skill-tag[data-tech="ajv"]::before {
+  content: "\f0e8";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  color: #23c8d2;
+}
+
+/* Mobile responsiveness for skill icons - enhanced */
+@media screen and (max-width: 576px) {
+  .skill-name {
+    padding-left: 24px;
+  }
+
+  .skill-name::before {
+    font-size: 16px;
+  }
+
+  .skill-tag {
+    padding-left: 22px !important;
+  }
+
+  .skill-tag::before {
+    font-size: 12px;
+    left: 5px;
+  }
+}
+
+/* Improved styling for mobile experience display */
+@media screen and (max-width: 768px) {
+  .experience-body li {
+    padding-left: 25px;
+  }
+
+  .experience-body li:before {
+    left: 0;
+  }
+
+  .experience-icon {
+    margin-right: 0;
+  }
+
+  #resume .experience-item {
+    padding: 20px;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,90 @@
+/* Animated Job Title Styles */
+
+.animated-title-container {
+  height: 2.5em; /* Increased fixed height for larger font size */
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.animated-title {
+  display: inline-block;
+  position: relative;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.75rem; /* Increased font size */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.animated-title::after {
+  content: "|";
+  position: absolute;
+  right: -8px;
+  color: var(--primary-color);
+  animation: cursor-blink 1s infinite step-end;
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Add overflow and white-space properties to the main selector instead */
+
+.animated-title .letter {
+  display: inline-block;
+  opacity: 0;
+  padding-right: 3px; /* Space between letters */
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Special styling for space characters */
+.animated-title .letter.space-letter {
+  width: 0.35em; /* Make spaces wider */
+  margin-right: 0.2em; /* Add extra space after space character */
+}
+
+.animated-title .letter.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-title.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Removed typing and deleting animations as we're using a different approach */
+
+/* Ensure accessibility */
+.animated-title-container .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .animated-title-container {
+    height: 2em;
+    margin-bottom: 0.3rem;
+  }
+
+  .animated-title {
+    font-size: 1.3rem; /* Keep it relatively large but smaller than desktop */
+  }
+}

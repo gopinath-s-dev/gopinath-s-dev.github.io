@@ -1,0 +1,40 @@
+/* Project Highlights Styles */
+.project-highlights {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.project-highlights li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.project-highlights li i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  color: var(--primary-color);
+}
+
+/* Mobile responsive styles for project cards */
+@media screen and (max-width: 768px) {
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-highlights li {
+    font-size: 14px;
+    padding-left: 22px;
+  }
+
+  .project-tech {
+    flex-wrap: wrap;
+  }
+
+  .project-tech span {
+    margin-bottom: 5px;
+  }
+}

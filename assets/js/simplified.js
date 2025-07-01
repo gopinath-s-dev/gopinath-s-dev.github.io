@@ -205,14 +205,22 @@ function initCounterAnimation() {
               count += increment;
               if (count > target) count = target;
 
-              counter.textContent = decimals
-                ? count.toFixed(decimals)
-                : Math.floor(count);
+              // Update only the number span, not the entire counter
+              const numSpan = counter.querySelector("span:first-child");
+              if (numSpan) {
+                numSpan.textContent = decimals
+                  ? count.toFixed(decimals)
+                  : Math.floor(count);
+              }
               requestAnimationFrame(updateCount);
             } else {
-              counter.textContent = decimals
-                ? target.toFixed(decimals)
-                : target;
+              // Final value
+              const numSpan = counter.querySelector("span:first-child");
+              if (numSpan) {
+                numSpan.textContent = decimals
+                  ? target.toFixed(decimals)
+                  : target;
+              }
             }
           };
 
