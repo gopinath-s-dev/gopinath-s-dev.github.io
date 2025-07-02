@@ -1,0 +1,184 @@
+/* Mobile Fixes - Addressing overlapping content */
+
+/* General mobile improvements */
+@media screen and (max-width: 768px) {
+  /* Increase spacing between sections for better scrolling */
+  section {
+    padding: 50px 0;
+  }
+
+  /* Ensure text is properly sized on mobile */
+  body {
+    font-size: 15px;
+  }
+
+  /* Fix hero section spacing */
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+
+  /* Fix profile image size and positioning */
+  .profile-image-container {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 20px;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Fix experience badge positioning */
+  .experience-badge {
+    bottom: 0;
+    right: 0;
+    transform: translate(15%, 15%);
+    padding: 8px;
+  }
+
+  /* Fix animated job title container */
+  .animated-title-container {
+    justify-content: center;
+    min-height: 60px;
+  }
+
+  /* Fix skill categories */
+  .skill-category {
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+
+  /* Fix skill tags spacing */
+  .skill-tags {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    margin: 4px;
+    padding: 5px 10px;
+  }
+
+  /* Fix experience section */
+  .experience-item {
+    padding: 15px;
+  }
+
+  .experience-header {
+    align-items: flex-start;
+  }
+
+  .experience-body ul li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+  }
+
+  .experience-body ul li i {
+    left: 0;
+    top: 3px;
+  }
+
+  /* Fix certifications content */
+  .certifications-content {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  /* Reduce padding further */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Fix counter items */
+  .counter-item {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .counter-value {
+    font-size: 24px;
+  }
+
+  /* Fix hero content spacing */
+  .hero-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero-intro {
+    font-size: 14px;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item {
+    margin-bottom: 10px;
+  }
+
+  .bug-fixes-badge {
+    margin-top: 10px;
+  }
+
+  /* Fix button sizing */
+  .hero-cta {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Fix personal info sections */
+  .personal-info {
+    gap: 15px;
+  }
+
+  .info-item h3 {
+    font-size: 18px;
+  }
+
+  .info-item ul li {
+    margin-bottom: 8px;
+  }
+
+  /* Fix skill items */
+  .skill-item {
+    margin-bottom: 15px;
+  }
+
+  .skill-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-percentage {
+    margin-top: 5px;
+    margin-left: 0;
+  }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  /* Fix for sticky elements and iOS scrolling */
+  .navbar {
+    position: fixed;
+  }
+
+  /* Fix iOS font rendering */
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+}

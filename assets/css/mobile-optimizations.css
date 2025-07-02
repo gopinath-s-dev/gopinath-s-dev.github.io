@@ -1,0 +1,102 @@
+/* Mobile Performance Optimizations */
+
+/* Reduce animations and transitions on mobile */
+@media screen and (max-width: 768px) {
+  /* Simplify or disable complex animations */
+  .animated {
+    animation-duration: 0.2s !important;
+  }
+
+  /* Reduce transition durations */
+  * {
+    transition-duration: 0.2s !important;
+  }
+
+  /* Disable hover effects on touch devices */
+  @media (hover: none) {
+    .hover-effect:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  /* Reduce or disable parallax effects */
+  .parallax {
+    background-attachment: scroll !important;
+  }
+
+  /* Optimize background images */
+  .bg-image {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+  }
+
+  /* Reduce or disable box-shadows */
+  .reduced-shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Use hardware acceleration for smoother scrolling */
+  body,
+  .scrollable {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix for sticky position elements */
+  .navbar {
+    position: fixed !important;
+  }
+
+  /* Ensure GPU acceleration for critical animations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+/* Fix for iOS specific issues */
+@supports (-webkit-touch-callout: none) {
+  /* Fix for iOS vh unit bug */
+  .full-height {
+    height: -webkit-fill-available !important;
+  }
+
+  /* Fix iOS input styling */
+  input,
+  select,
+  textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+/* Optimize loading behavior */
+@media screen and (max-width: 768px) {
+  /* Hide non-essential elements until page is fully loaded */
+  body.loading .non-essential {
+    opacity: 0;
+  }
+
+  /* Show critical content first */
+  .critical-content {
+    display: block !important;
+  }
+}
+
+/* Fix layout jumping during load */
+html {
+  scroll-padding-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Prevent content jumping when scrollbar appears */
+  html {
+    overflow-y: scroll;
+  }
+
+  /* Reserve space for fixed elements */
+  body {
+    padding-top: 70px;
+  }
+}

@@ -1,0 +1,133 @@
+/* Mobile Interactive Elements Fix */
+
+/* Form elements and inputs */
+@media screen and (max-width: 768px) {
+  /* Fix form layout */
+  form {
+    width: 100%;
+  }
+
+  /* Make form elements more touch-friendly */
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+    padding: 12px !important;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+
+  /* Prevent form field zooming on iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Fix label positioning */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* Style form groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  /* Form submit buttons */
+  input[type="submit"],
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px !important;
+  }
+
+  /* Fix for checkboxes and radios */
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+  }
+}
+
+/* Fix interactive elements */
+@media screen and (max-width: 768px) {
+  /* Make dropdowns and selects mobile-friendly */
+  select {
+    background-position: right 10px center;
+    padding-right: 30px !important;
+  }
+
+  /* Fix for modal dialogs and popups */
+  .modal-content {
+    width: 90% !important;
+    margin: 0 auto;
+    padding: 15px !important;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+  }
+
+  /* Fix tooltips and popovers */
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    display: none;
+  }
+}
+
+/* Fix for interactive elements that use hover states */
+@media (hover: none) {
+  /* Replace hover effects with active states */
+  .hover-effect:hover {
+    transform: none !important;
+  }
+
+  /* Disable hover animations */
+  *:hover {
+    transition: none !important;
+  }
+
+  /* Fix project cards */
+  .project-card:hover .project-overlay {
+    opacity: 0;
+  }
+
+  .project-card:active .project-overlay {
+    opacity: 1;
+  }
+
+  /* Make project details always visible on mobile */
+  .project-card .project-details {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Fix contact form specifically */
+@media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form-container {
+    padding: 0;
+  }
+
+  /* Ensure submit button has proper spacing */
+  .contact-form .primary-btn {
+    margin-top: 10px;
+  }
+
+  /* Fix for contact details */
+  .contact-info {
+    margin-top: 20px;
+  }
+}

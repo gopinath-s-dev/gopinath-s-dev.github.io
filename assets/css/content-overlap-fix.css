@@ -1,0 +1,203 @@
+/* Content Overlap Fix for Mobile Devices */
+
+/* Fix overlapping content and improve spacing on all mobile devices */
+@media screen and (max-width: 768px) {
+  /* General spacing fixes */
+  section {
+    margin-bottom: 30px;
+    overflow: hidden; /* Prevent any horizontal overflow */
+  }
+
+  /* Fix for card-based layouts to prevent overlap */
+  .card,
+  .project-card,
+  .certification-card,
+  .experience-item {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Reduce padding in all containers */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Project section fixes */
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-card {
+    height: auto;
+    min-height: 320px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  /* About section fixes */
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .about-features {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  /* Contact form fixes */
+  .contact-form-container {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+  }
+
+  /* Fix social icons spacing */
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Fix footer content alignment */
+  .footer-content {
+    text-align: center;
+  }
+}
+
+/* Very small devices */
+@media screen and (max-width: 480px) {
+  /* Further reduce text sizes */
+  h1 {
+    font-size: 28px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+
+  p,
+  li,
+  a {
+    font-size: 14px;
+  }
+
+  /* Fix nav menu button positioning */
+  .mobile-menu-btn {
+    right: 20px;
+  }
+
+  /* Project card height adjustment */
+  .project-card {
+    min-height: 280px;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  /* Fix navigation links in mobile menu */
+  .nav-links a {
+    width: 90%;
+  }
+
+  /* Contact form adjustments */
+  .contact-form .primary-btn {
+    width: 100%;
+  }
+}
+
+/* Fix for landscape mode */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+    margin-top: 0;
+  }
+}
+
+/* Utility classes to fix specific overlapping elements */
+@media screen and (max-width: 768px) {
+  /* Fix for any absolutely positioned elements */
+  .mobile-relative {
+    position: relative !important;
+  }
+
+  /* Fix for any fixed width elements */
+  .mobile-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Remove horizontal overflow */
+  .no-overflow-x {
+    overflow-x: hidden;
+  }
+}
+
+/* Fix any z-index issues causing overlapping */
+@media screen and (max-width: 768px) {
+  .navbar {
+    z-index: 1000;
+  }
+
+  .nav-links {
+    z-index: 999;
+  }
+
+  .mobile-menu-btn {
+    z-index: 1001;
+  }
+}
+
+/* Fix certifications grid */
+@media screen and (max-width: 768px) {
+  .certifications-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  .certification-card {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

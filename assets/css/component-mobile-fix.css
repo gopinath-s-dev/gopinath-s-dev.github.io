@@ -1,0 +1,141 @@
+/* Advanced Mobile Fixes for UI Components */
+
+/* Fix any tables or data grids */
+@media screen and (max-width: 768px) {
+  table,
+  tbody,
+  thead,
+  tr {
+    display: block;
+    width: 100% !important;
+  }
+
+  th,
+  td {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  /* Hide table headers on small screens */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  td {
+    position: relative;
+    padding-left: 50% !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  td:before {
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}
+
+/* Fix navigation scrolling behavior */
+@media screen and (max-width: 768px) {
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  .nav-links {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Fix animated elements and transitions for mobile */
+@media screen and (max-width: 768px) {
+  [data-aos] {
+    /* Disable AOS animations on mobile for better performance */
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Simplify transitions for better mobile performance */
+  * {
+    transition-duration: 0.2s !important;
+  }
+}
+
+/* Fix touch interactions */
+@media screen and (max-width: 768px) {
+  /* Make buttons and interactive elements larger for touch */
+  button,
+  .btn,
+  .primary-btn,
+  .secondary-btn,
+  a.btn,
+  input[type="submit"],
+  .social-icon {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Add touch-action for smoother scrolling */
+  body,
+  .container {
+    touch-action: pan-y;
+  }
+}
+
+/* Fix loading screen on mobile */
+@media screen and (max-width: 768px) {
+  #loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #loader-content {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Fix custom cursor on mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  #cursor,
+  #cursor-dot,
+  #cursor-ring {
+    display: none !important;
+  }
+}
+
+/* Fix any grid-based layouts */
+@media screen and (max-width: 768px) {
+  .grid-container,
+  .grid,
+  [class*="grid-"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px;
+  }
+
+  .grid-item,
+  [class*="grid-"] > * {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

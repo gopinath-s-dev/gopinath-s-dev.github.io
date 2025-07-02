@@ -1,0 +1,86 @@
+/* Hero section mobile responsiveness fixes */
+
+@media (max-width: 768px) {
+  /* Fix hero container layout */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Center content */
+  .hero-content {
+    text-align: center;
+    padding: 0;
+  }
+
+  /* Fix the profile image positioning */
+  .profile-image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  /* Make background shapes smaller */
+  .hero-bg-shape {
+    opacity: 0.3;
+    transform: scale(0.6);
+  }
+
+  /* Adjust hero stats layout */
+  .hero-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .stat-item {
+    min-width: 120px;
+  }
+
+  /* Fix badge position */
+  .bug-fixes-badge {
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Make buttons stack on very small screens */
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .hero-cta a {
+    margin: 5px 0;
+  }
+
+  /* Smaller profile image */
+  .profile-image-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Reduce padding on hero section */
+  .hero {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  /* Fix animated title for small screens */
+  .animated-title-container {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .animated-title {
+    font-size: 18px !important;
+  }
+}
