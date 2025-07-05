@@ -64,6 +64,26 @@
     
     <!-- Modern Custom Cursor & Loader Styles -->
     <link rel="stylesheet" href="assets/css/cursor-loader.css" />
+    <!-- Enhanced Cursor Color for Better Visibility -->
+    <link rel="stylesheet" href="assets/css/cursor-color.css" />
+    <!-- Section-specific cursor adjustments -->
+    <link rel="stylesheet" href="assets/css/cursor-section-fixes.css" />
+    
+    <!-- Critical inline styles for cursor visibility -->
+    <style>
+      /* Ensure cursor is always visible with these critical styles */
+      #cursor {
+        mix-blend-mode: exclusion !important;
+        z-index: 10000 !important;
+      }
+      #cursor-dot {
+        background: #FFFFFF !important;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.7), 0 0 2px #000 !important;
+      }
+      #cursor-ring {
+        border-color: #FFFFFF !important;
+      }
+    </style>
   </head>
   <body>
     <!-- Elegant Loading Screen -->
@@ -208,6 +228,7 @@
           </h2>          <div class="about-content">
             <div class="row" style="display: flex; flex-wrap: wrap">
 
+              <!-- Left column - Existing content -->
               <div class="col" style="flex: 1; min-width: 300px">
                 <div class="about-text">
                   <div class="about-bio">
@@ -1055,6 +1076,9 @@
         display: inline-block;
       }
     </style>
+    
+    <!-- Enhanced Cursor Visibility -->
+    <script src="assets/js/enhanced-cursor-visibility.js"></script>
     
     <!-- Modern Custom Cursor & Loader Script -->
     <script src="assets/js/cursor-loader.js"></script>

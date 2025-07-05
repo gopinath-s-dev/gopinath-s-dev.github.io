@@ -1,0 +1,57 @@
+/**
+ * Section-specific cursor adjustments
+ * This ensures the cursor is visible on specific backgrounds
+ */
+
+/* Hero section with gradient background */
+.hero #cursor {
+  mix-blend-mode: difference !important;
+}
+
+/* Skills section has different backgrounds */
+.skills #cursor {
+  mix-blend-mode: exclusion !important;
+}
+
+/* Dark backgrounds need special treatment */
+.dark-bg #cursor-dot,
+.hero-bg-shape #cursor-dot,
+.footer #cursor-dot,
+.about #cursor-dot,
+.projects #cursor-dot {
+  background: #ffffff !important;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5) !important;
+}
+
+.dark-bg #cursor-ring,
+.hero-bg-shape #cursor-ring,
+.footer #cursor-ring,
+.about #cursor-ring,
+.projects #cursor-ring {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Light backgrounds need different treatment */
+.light-bg #cursor-dot,
+.skills #cursor-dot,
+.experience #cursor-dot {
+  background: #ffffff !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7) !important;
+}
+
+.light-bg #cursor-ring,
+.skills #cursor-ring,
+.experience #cursor-ring {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Extra contrast for clickable elements */
+a:hover ~ #cursor,
+button:hover ~ #cursor,
+input:hover ~ #cursor,
+.btn:hover ~ #cursor {
+  opacity: 1 !important;
+  filter: contrast(1.2) brightness(1.1) !important;
+}

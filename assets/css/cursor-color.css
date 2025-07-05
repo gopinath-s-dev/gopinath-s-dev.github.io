@@ -1,0 +1,114 @@
+/**
+ * Enhanced Cursor Color Visibility
+ * Makes the cursor visible on all backgrounds using advanced mix-blend-mode and contrast techniques
+ */
+
+/* Base cursor container - use exclusion blend mode for best contrast */
+#cursor {
+  mix-blend-mode: exclusion !important;
+  filter: contrast(1.1) !important;
+  z-index: 10000 !important; /* Ensure it's above all other elements */
+}
+
+/* Different cursor styles based on background detection */
+.on-dark-bg #cursor-dot {
+  background: #ffffff !important;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 4px rgba(255, 255, 255, 0.7) !important;
+}
+
+.on-dark-bg #cursor-ring {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4),
+    0 0 5px rgba(255, 255, 255, 0.6) !important;
+}
+
+.on-light-bg #cursor-dot {
+  background: #ffffff !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 4px rgba(0, 0, 0, 0.9) !important;
+}
+
+.on-light-bg #cursor-ring {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Main cursor dot - pure white with strong outline */
+#cursor-dot {
+  width: 10px !important;
+  height: 10px !important;
+  background: #ffffff !important; /* Pure bright white */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7),
+    /* Outer dark shadow for light backgrounds */ 0 0 3px rgba(0, 0, 0, 0.9),
+    /* Middle shadow */ 0 0 1px rgba(0, 0, 0, 1) !important; /* Strong inner shadow */
+  opacity: 0.95 !important; /* Slight transparency for better visibility */
+}
+
+/* Cursor ring - high contrast border */
+#cursor-ring {
+  border: 2px solid #ffffff !important; /* Solid white border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+    /* Outer shadow */ 0 0 5px rgba(0, 0, 0, 0.7) !important; /* Inner shadow */
+  opacity: 0.9 !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+/* Hover states - increase visibility */
+.cursor-hover #cursor-dot {
+  background: #ffffff !important;
+  transform: translate(-50%, -50%) scale(1.3) !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 4px rgba(0, 0, 0, 1) !important;
+}
+
+.cursor-hover #cursor-ring {
+  border-color: #ffffff !important;
+  transform: translate(-50%, -50%) scale(1.5) !important;
+  opacity: 0.95 !important;
+  width: 44px !important;
+  height: 44px !important;
+}
+
+/* Click states */
+.cursor-click #cursor-dot {
+  background: #ffffff !important;
+  transform: translate(-50%, -50%) scale(0.8) !important;
+}
+
+.cursor-click #cursor-ring {
+  border-color: #ffffff !important;
+  transform: translate(-50%, -50%) scale(1.3) !important;
+  opacity: 0.6 !important;
+}
+
+/* Ensure the cursor stays visible even on problematic backgrounds */
+@media (prefers-reduced-motion: no-preference) {
+  #cursor-dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #000000; /* Black center */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+/* Fallback for browsers that don't support mix-blend-mode */
+@supports not (mix-blend-mode: exclusion) {
+  #cursor {
+    mix-blend-mode: normal !important;
+  }
+
+  #cursor-dot {
+    background: #ffffff !important;
+    box-shadow: 0 0 8px #000000 !important;
+  }
+
+  #cursor-ring {
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 0 10px #000000 !important;
+  }
+}
