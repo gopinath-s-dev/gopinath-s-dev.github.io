@@ -1,5 +1,64 @@
 /* Final fixes for portfolio issues */
 
+/* ABOUT SECTION: Layout balance fixes */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content .row {
+  justify-content: space-between;
+}
+
+.about .col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text,
+.resume-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ensure no awkward gaps */
+.resume-section:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/* Make sure mobile layout has proper spacing */
+@media screen and (max-width: 767px) {
+  .about-content .row {
+    gap: 0;
+  }
+
+  .resume-col {
+    padding-top: 20px;
+  }
+
+  .resume-content {
+    margin-bottom: 20px;
+  }
+}
+
+/* Adjustments for very large screens */
+@media screen and (min-width: 1400px) {
+  .about-content .row {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .resume-section {
+    margin-bottom: 35px;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* SKILLS SECTION: Clear fix for skill progress bars */
 .skill-bar {
   width: 0 !important;

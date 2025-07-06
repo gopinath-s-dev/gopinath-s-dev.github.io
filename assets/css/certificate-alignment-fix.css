@@ -1,0 +1,102 @@
+/* Certification cards alignment fix */
+
+/* Make all certification cards the same height with consistent internal alignment */
+.certifications-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Ensure project cards have consistent height and layout */
+.certifications .project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Set consistent padding and structure */
+.certifications .project-details {
+  padding: 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Consistent heading height */
+.certifications .project-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  min-height: 3em; /* Ensure consistent space for title regardless of length */
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Keep icon alignment consistent */
+.certifications .project-details h3 i {
+  margin-right: 10px;
+  margin-top: 3px; /* Align icon with first line of text */
+}
+
+/* Consistent spacing for issuer and date */
+.certifications .project-details p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  display: flex; /* Make issuer and date fields use flex display */
+}
+
+.certifications .project-details p strong {
+  min-width: 55px; /* Set a fixed width for the labels to ensure alignment */
+  display: inline-block;
+}
+
+/* Specific fix for third certificate spacing */
+#certifications .project-card:nth-child(3) .project-details p {
+  margin-bottom: 10px; /* Ensure consistent bottom margin */
+  line-height: 1.5;
+  display: flex;
+}
+
+/* First p (Issuer) in the third certificate */
+#certifications .project-card:nth-child(3) .project-details p:first-of-type {
+  margin-bottom: 10px; /* Match the exact spacing of first certificate */
+}
+
+/* Push tech tags toward the bottom */
+.certifications .project-tech {
+  margin-top: auto;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Consistent tech tag styling */
+.certifications .project-tech span {
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Keep view certificate link at the bottom */
+.certification-link {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.certification-link a {
+  padding: 8px 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Ensure all certificate cards have the same effective height */
+#certifications .project-card:nth-child(3) .project-details {
+  height: 100%;
+}

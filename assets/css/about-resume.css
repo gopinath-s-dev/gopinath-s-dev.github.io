@@ -1,0 +1,412 @@
+/* About Resume Section Styling */
+.resume-col {
+  padding: 25px;
+  margin-top: 30px;
+  border-left: 1px solid rgba(var(--border-color), 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.resume-content {
+  padding: 30px;
+  background: rgba(var(--card-bg-color), 0.05);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  border: 1px solid rgba(var(--border-color), 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle at top right,
+    rgba(var(--accent-color), 0.08),
+    transparent 70%
+  );
+  border-radius: 0 12px 0 100%;
+  pointer-events: none;
+}
+
+/* Resume Section Headers */
+.resume-section {
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+  position: relative;
+  background: rgba(var(--card-bg-color), 0.02);
+  border-radius: 10px;
+  padding: 5px 0;
+}
+
+.resume-section:last-child {
+  margin-bottom: 0;
+}
+
+.resume-section:hover {
+  transform: translateY(-5px);
+  background: rgba(var(--card-bg-color), 0.04);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+}
+
+.resume-section h3 {
+  font-size: 1.2rem;
+  color: rgb(var(--accent-color));
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px 15px;
+  background: rgba(var(--accent-color), 0.08);
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.resume-section h3 i {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  background: rgba(var(--accent-color), 0.15);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(var(--accent-color), 0.2);
+}
+
+.resume-section h3::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: -3px;
+  width: 40px;
+  height: 3px;
+  background-color: rgb(var(--accent-color));
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.resume-section:hover h3::after {
+  width: calc(100% - 30px);
+}
+
+.resume-section p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgb(var(--text-color));
+}
+
+/* Education Styling */
+.education-item,
+.cert-item {
+  margin-bottom: 18px;
+  padding: 15px;
+  border-left: 3px solid rgb(var(--accent-color));
+  background: rgba(var(--card-bg-color), 0.05);
+  border-radius: 0 10px 10px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-item::before,
+.cert-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(var(--accent-color), 0.03),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.education-item:hover,
+.cert-item:hover {
+  background: rgba(var(--accent-color), 0.08);
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.education-item:hover::before,
+.cert-item:hover::before {
+  opacity: 1;
+}
+
+.education-item:last-child,
+.cert-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item h4,
+.cert-item h4 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: rgb(var(--heading-color));
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.2px;
+}
+
+.education-item h4::after,
+.cert-item h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: rgb(var(--accent-color));
+  transition: width 0.4s ease;
+}
+
+.education-item:hover h4::after,
+.cert-item:hover h4::after {
+  width: 100%;
+}
+
+.institution,
+.duration {
+  font-size: 0.9rem;
+  color: rgb(var(--text-color), 0.8);
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.institution {
+  font-weight: 500;
+}
+
+.institution::before,
+.duration::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: rgb(var(--accent-color), 0.7);
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 0 2px rgba(var(--accent-color), 0.1);
+}
+
+.duration {
+  font-style: italic;
+}
+
+/* Expertise Areas */
+.expertise-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0 5px;
+  width: 100%;
+}
+
+.expertise-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(var(--card-bg-color), 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(var(--border-color), 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(var(--accent-color));
+  transition: width 0.3s ease;
+}
+
+.expertise-item:hover {
+  background: rgba(var(--accent-color), 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.expertise-item:hover::before {
+  width: 100%;
+}
+
+.expertise-item i {
+  color: rgb(var(--accent-color));
+  font-size: 1.1rem;
+  background: rgba(var(--accent-color), 0.1);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.expertise-item:hover i {
+  transform: scale(1.1);
+  background: rgba(var(--accent-color), 0.15);
+}
+
+.expertise-item span {
+  font-size: 0.95rem;
+  color: rgb(var(--text-color));
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Professional Highlights */
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  padding: 5px;
+  width: 100%;
+}
+
+.stat-box {
+  background: rgba(var(--accent-color), 0.08);
+  border-radius: 12px;
+  padding: 18px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+}
+
+.stat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(var(--accent-color)),
+    transparent
+  );
+}
+
+.stat-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(var(--accent-color), 0.1),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  background: rgba(var(--accent-color), 0.12);
+  box-shadow: 0 8px 20px rgba(var(--accent-color), 0.15);
+}
+
+.stat-box:hover::after {
+  opacity: 1;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgb(var(--accent-color));
+  line-height: 1;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(var(--accent-color), 0.2);
+  position: relative;
+  display: inline-block;
+}
+
+.stat-number span {
+  font-size: 1rem;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: rgb(var(--text-color), 0.85);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Dark mode specific styling */
+[data-theme="dark"] .resume-content {
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .resume-section h3 {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .resume-section h3 i {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .stat-box {
+  background: rgba(var(--accent-color), 0.15);
+}
+
+[data-theme="dark"] .stat-box:hover {
+  background: rgba(var(--accent-color), 0.25);
+}
+
+[data-theme="dark"] .education-item,
+[data-theme="dark"] .cert-item {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .education-item:hover,
+[data-theme="dark"] .cert-item:hover {
+  background: rgba(var(--accent-color), 0.15);
+}
+
+[data-theme="dark"] .expertise-item {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .expertise-item:hover {
+  background: rgba(var(--accent-color), 0.15);
+}

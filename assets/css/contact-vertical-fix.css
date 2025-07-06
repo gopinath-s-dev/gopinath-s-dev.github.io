@@ -1,0 +1,39 @@
+/* Final fixes for contact section vertical scrolling */
+
+/* Ensure the page doesn't have extra scrollable space */
+body {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should take available space */
+main {
+  flex: 1;
+}
+
+/* Fix for the contact section */
+.contact {
+  position: relative;
+  overflow: visible !important;
+  box-sizing: border-box;
+  padding-bottom: 0 !important;
+}
+
+/* Fix contact section bottom elements */
+.contact-cta {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Adjust social connect margins */
+.social-connect {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Fix for footer spacing */
+.footer {
+  margin-top: 0 !important;
+}

@@ -1,0 +1,66 @@
+/* 
+ * Overflow Fix - Address both horizontal and vertical overflow issues
+ */
+
+/* Set box-sizing to border-box for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix body and html overflow */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+/* Make sure containers respect boundaries */
+.container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: var(--container-width, 1200px);
+}
+
+/* Fix any elements that might overflow */
+img,
+video,
+iframe,
+canvas,
+svg,
+table {
+  max-width: 100%;
+}
+
+/* Address flex and grid containers */
+.row,
+.flex-container,
+.grid-container,
+.skills-container,
+.projects-content,
+.contact-grid {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Fix absolute/fixed positioned elements */
+.navbar,
+.hero-bg-shape,
+#cursor {
+  max-width: 100vw;
+}
+
+/* Fix contact section specific overflow issues */
+.contact {
+  overflow: hidden;
+}
+
+/* Fix for sections padding/margins */
+section {
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}

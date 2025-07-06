@@ -1,0 +1,146 @@
+/* Additional About Section Alignment Fixes */
+
+/* Fix container alignment */
+.about .container {
+  overflow: visible;
+  padding-bottom: 40px;
+}
+
+/* Ensure proper spacing between sections */
+.resume-section + .resume-section {
+  margin-top: 30px;
+}
+
+/* Ensure proper height and alignment of columns */
+.about-col,
+.resume-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.about-text,
+.resume-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Fixes for flexbox gaps in older browsers */
+@supports not (gap: 30px) {
+  .about-row > div {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+/* Ensure proper spacing in sections */
+.resume-section:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/* Equal height stat boxes */
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+/* Fix space distribution in columns */
+@media screen and (min-width: 992px) {
+  .about-col,
+  .resume-col {
+    justify-content: space-between;
+  }
+
+  .resume-content {
+    justify-content: space-between;
+  }
+}
+
+/* Mobile alignment fixes */
+@media screen and (max-width: 767px) {
+  .about-content {
+    padding: 10px 0;
+  }
+
+  .about-row {
+    padding: 0 10px;
+  }
+
+  .resume-content {
+    margin-left: -5px;
+    margin-right: -5px;
+    width: calc(100% + 10px);
+  }
+
+  .expertise-area {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra small device fixes */
+@media screen and (max-width: 360px) {
+  .quick-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box {
+    padding: 15px 10px;
+  }
+}
+
+/* Desktop specific alignment fixes */
+@media screen and (min-width: 1200px) {
+  .about-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .about-col,
+  .resume-col {
+    width: 50%;
+    flex: 0 0 47%;
+    max-width: 47%;
+  }
+
+  .resume-col {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .about-text,
+  .resume-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Match top content alignment between columns */
+  .resume-content {
+    height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  /* Align resume section headers with left column content */
+  .resume-section h3 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  /* First resume section should align with top content */
+  .resume-section:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

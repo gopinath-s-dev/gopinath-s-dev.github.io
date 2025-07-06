@@ -1,0 +1,353 @@
+/* Responsive Styles for About Resume Section */
+
+/* Large desktop screens */
+@media screen and (min-width: 1400px) {
+  .about-row {
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .resume-content {
+    padding: 35px 40px;
+  }
+
+  .resume-col {
+    padding-left: 40px;
+  }
+
+  .expertise-area {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .resume-section {
+    margin-bottom: 40px;
+  }
+}
+
+/* Large desktop screens */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .resume-content {
+    padding: 30px 35px;
+  }
+
+  .resume-col {
+    padding-left: 40px;
+  }
+
+  .about-row {
+    gap: 30px;
+  }
+
+  .expertise-area {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Medium desktop screens */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .resume-content {
+    padding: 25px 30px;
+  }
+
+  .about-row {
+    gap: 25px;
+  }
+
+  .resume-col {
+    padding-left: 30px;
+  }
+
+  .expertise-area {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Tablet and small desktop */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .about-row {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+
+  .about-col,
+  .resume-col {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .resume-col {
+    border-left: none;
+    border-top: 1px solid rgba(var(--border-color), 0.1);
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .resume-content {
+    padding: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .expertise-area {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .resume-section h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 767px) {
+  .about-row {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+  }
+
+  .about-col,
+  .resume-col {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .resume-col {
+    border-left: none;
+    border-top: 1px solid rgba(var(--border-color), 0.1);
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .resume-content {
+    padding: 20px;
+  }
+
+  .resume-section {
+    margin-bottom: 25px;
+    padding: 0;
+  }
+
+  .resume-section h3 {
+    font-size: 1.05rem;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+  }
+
+  .resume-section h3 i {
+    width: 30px;
+    height: 30px;
+    font-size: 0.95rem;
+    margin-right: 10px;
+  }
+
+  .resume-section h3::after {
+    left: 12px;
+    width: 30px;
+  }
+
+  .resume-section:hover h3::after {
+    width: calc(100% - 24px);
+  }
+
+  .resume-section p {
+    font-size: 0.9rem;
+  }
+
+  .education-item,
+  .cert-item {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .education-item h4,
+  .cert-item h4 {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .institution,
+  .duration {
+    font-size: 0.85rem;
+  }
+
+  .institution::before,
+  .duration::before {
+    width: 5px;
+    height: 5px;
+    margin-right: 6px;
+  }
+
+  .expertise-area {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .expertise-item {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .expertise-item i {
+    font-size: 0.9rem;
+    width: 28px;
+    height: 28px;
+  }
+
+  .expertise-item span {
+    font-size: 0.9rem;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-box {
+    padding: 15px 10px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .resume-content {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .resume-section {
+    margin-bottom: 22px;
+  }
+
+  .resume-section h3 {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+
+  .resume-section h3 i {
+    font-size: 0.9rem;
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
+  }
+
+  .resume-section h3::after {
+    bottom: -2px;
+  }
+
+  .expertise-area {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .expertise-item {
+    padding: 8px 10px;
+  }
+
+  .education-item,
+  .cert-item {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .education-item h4,
+  .cert-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .institution,
+  .duration {
+    font-size: 0.8rem;
+  }
+
+  .quick-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-box {
+    padding: 15px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 360px) {
+  .resume-content {
+    padding: 15px;
+  }
+
+  .resume-section h3 {
+    font-size: 0.95rem;
+    padding: 7px 8px;
+  }
+
+  .resume-section h3 i {
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
+  }
+
+  .stat-box {
+    padding: 12px;
+    max-width: 90%;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+}

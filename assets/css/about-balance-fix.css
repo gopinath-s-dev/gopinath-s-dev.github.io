@@ -1,0 +1,118 @@
+/* About Section Layout Balance Fixes */
+
+/* Ensure consistent layout across the section */
+.about-content {
+  padding: 20px 0;
+  overflow: visible;
+}
+
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 0 -15px;
+}
+
+/* Balance the columns */
+.about-col,
+.resume-col {
+  flex: 1;
+  min-width: 300px;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+/* Background decorations for visual interest */
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before,
+.about::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--accent-color), 0.03),
+    transparent 70%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.about::before {
+  top: 10%;
+  left: -150px;
+}
+
+.about::after {
+  bottom: 10%;
+  right: -150px;
+}
+
+/* Column visual balance */
+.about-text,
+.resume-content {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-bio {
+  margin-bottom: 30px;
+}
+
+/* Fallback support for older browsers */
+@supports not (gap: 30px) {
+  .about-content .col,
+  .about-content .resume-col {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+/* Smooth spacing adjustments */
+.about-features {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Animation duration tuning */
+[data-aos].resume-section {
+  transition-duration: 800ms;
+}
+
+/* Fix double-transform issue with AOS and hover effects */
+[data-aos="fade-up"].resume-section.aos-animate:hover {
+  transform: translateY(-5px);
+}
+
+/* Focus styles for accessibility */
+.expertise-item:focus-within,
+.stat-box:focus-within,
+.education-item:focus-within,
+.cert-item:focus-within {
+  outline: 2px solid rgba(var(--accent-color), 0.3);
+  box-shadow: 0 0 0 3px rgba(var(--accent-color), 0.1);
+}
+
+/* Print styles */
+@media print {
+  .about-content .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .resume-col {
+    border-left: 1px solid #ddd;
+  }
+}

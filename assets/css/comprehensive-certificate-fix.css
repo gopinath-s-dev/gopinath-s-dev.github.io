@@ -1,0 +1,203 @@
+/* Comprehensive certificate alignment fix that works across all devices */
+
+/* Container layout for certificates */
+.certifications-container {
+  width: 100%;
+  padding: 0;
+}
+
+/* Use CSS Grid for better control across all screen sizes */
+.certifications-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* Base card styling with flexbox for internal elements */
+.certifications .project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.certifications .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Details container with consistent padding and layout */
+.certifications .project-details {
+  padding: 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title styling with consistent height */
+.certifications .project-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  min-height: 3em;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Icon alignment in titles */
+.certifications .project-details h3 i {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+/* Consistent styling for all paragraph elements (Issuer and Date) */
+.certifications .project-details p {
+  margin-bottom: 10px !important; /* Force consistent spacing with important */
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Strong labels (Issuer: and Date:) with fixed width */
+.certifications .project-details p strong {
+  min-width: 55px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Specific fix for the third certificate's Issuer field */
+.certifications .project-card:nth-child(3) .project-details p:nth-of-type(1) {
+  margin-bottom: 10px !important;
+}
+
+/* Specific fix for the third certificate's Date field */
+.certifications .project-card:nth-child(3) .project-details p:nth-of-type(2) {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+/* Tech tags section */
+.certifications .project-tech {
+  margin-top: auto;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Individual tech tags */
+.certifications .project-tech span {
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  background-color: var(--tag-bg, rgba(58, 134, 255, 0.1));
+  color: var(--tag-color, #4a88ff);
+}
+
+/* Certificate link container */
+.certification-link {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* Certificate link styling */
+.certification-link a {
+  padding: 8px 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.certification-link a:hover {
+  color: var(--secondary-color);
+}
+
+/* Ensure consistent spacing for the third certificate */
+.certifications .project-card:nth-child(3) .project-details p {
+  margin-bottom: 10px;
+}
+
+/* Super specific targeting for third certificate to guarantee consistency */
+#certifications .certifications-content .project-card:nth-child(3) .project-details p:nth-of-type(1),
+#certifications .certifications-content .project-card:nth-child(3) .project-details p:nth-of-type(2) {
+  margin-bottom: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+#certifications .certifications-content .project-card:nth-child(3) .project-details p:nth-of-type(1) strong,
+#certifications .certifications-content .project-card:nth-child(3) .project-details p:nth-of-type(2) strong {
+  min-width: 55px !important;
+  display: inline-block !important;
+  margin-right: 5px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .certifications-content {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .certifications-content {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .certifications .project-details h3 {
+    min-height: auto;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certifications-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .certifications .project-details {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .certifications-content {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Mobile-specific fixes for label alignment */
+  .certifications .project-details p strong {
+    min-width: 55px;
+    display: inline-block !important;
+  }
+  
+  /* Mobile-specific spacing fixes for all certificates */
+  .certifications .project-card .project-details p {
+    margin-bottom: 10px !important;
+  }
+  
+  /* Specific mobile fix for the third certificate */
+  .certifications .project-card:nth-child(3) .project-details p:nth-of-type(1),
+  .certifications .project-card:nth-child(3) .project-details p:nth-of-type(2) {
+    margin-bottom: 10px !important;
+  }
+}

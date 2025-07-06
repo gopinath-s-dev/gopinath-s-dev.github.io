@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/images/favicon.ico" />
-
     <title>Gopinath S | Software Engineer</title>
+    <link rel="icon" href="assets/images/favicon.ico" />
     <meta
       name="description"
-      content="Gopinath S - Software Engineer specializing in Node.js, Vue.js, and MongoDB. View my portfolio, projects, and experience."
+      content="Gopinath S - Software Engineer specializing in Node.js, Vue.js, and MongoDB"
     />
     <meta
       name="keywords"
@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="assets/css/final-fixes.css" />
     <link rel="stylesheet" href="assets/css/animation-fix.css" />
     <link rel="stylesheet" href="assets/css/ultimate-fix.css" />
-    <link rel="stylesheet" href="assets/css/final-enhancements.css" />    <link rel="stylesheet" href="assets/css/animation-overlap-fix.css" />    <link rel="stylesheet" href="assets/css/contact-redesign.css" />
+    <link rel="stylesheet" href="assets/css/final-enhancements.css" />
+    <link rel="stylesheet" href="assets/css/animation-overlap-fix.css" />
+    <link rel="stylesheet" href="assets/css/contact-redesign.css" />
     <link rel="stylesheet" href="assets/css/hero-background.css" />
     <link rel="stylesheet" href="assets/css/section-divider.css" />
     <link rel="stylesheet" href="assets/css/resume.css" />
@@ -41,6 +43,19 @@
     <link rel="stylesheet" href="assets/css/text-mobile-fix.css" />
     <link rel="stylesheet" href="assets/css/form-mobile-fix.css" />
     <link rel="stylesheet" href="assets/css/mobile-optimizations.css" />
+    <!-- Comprehensive mobile fixes for menu and responsiveness -->
+    <link rel="stylesheet" href="assets/css/comprehensive-mobile-fix.css" />
+    <link rel="stylesheet" href="assets/css/mobile-menu-display-fix.css" />
+    <link rel="stylesheet" href="assets/css/x-scroll-fix.css" />
+    <link rel="stylesheet" href="assets/css/vertical-scroll-fix.css" />
+    <link rel="stylesheet" href="assets/css/about-resume.css" />
+    <link rel="stylesheet" href="assets/css/about-responsive.css" />
+    <link rel="stylesheet" href="assets/css/about-balance-fix.css" />
+    <link rel="stylesheet" href="assets/css/about-alignment-fix.css" />
+    <link rel="stylesheet" href="assets/css/comprehensive-certificate-fix.css" />
+    <link rel="stylesheet" href="assets/css/profile-image-fix.css" />
+    <link rel="stylesheet" href="assets/css/awards-section.css" />
+    <link rel="stylesheet" href="assets/css/skills-single-column.css" />
 
     <!-- Font Awesome Icons -->
     <link
@@ -59,11 +74,12 @@
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <!-- Favicon already declared in the head section -->
     
     <!-- Modern Custom Cursor & Loader Styles -->
     <link rel="stylesheet" href="assets/css/cursor-loader.css" />
+    <!-- Center cursor on landing page -->
+    <link rel="stylesheet" href="assets/css/cursor-center.css" />
     <!-- Enhanced Cursor Color for Better Visibility -->
     <link rel="stylesheet" href="assets/css/cursor-color.css" />
     <!-- Section-specific cursor adjustments -->
@@ -127,6 +143,7 @@
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#certifications">Certifications</a>
+            <a href="#awards">Awards</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </div>
@@ -136,10 +153,13 @@
               id="mobileMenuBtn"
               class="mobile-menu-btn"
               aria-label="Toggle Mobile Menu"
+              aria-expanded="false"
+              aria-controls="navLinks"
+              type="button"
             >
-              <span class="menu-bar"></span>
-              <span class="menu-bar"></span>
-              <span class="menu-bar"></span>
+              <span class="menu-bar" aria-hidden="true"></span>
+              <span class="menu-bar" aria-hidden="true"></span>
+              <span class="menu-bar" aria-hidden="true"></span>
             </button>
           </div>
         </nav>
@@ -171,8 +191,8 @@
                 performance optimization and scalable solutions
               </p>
               <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
-                <div class="stat-item">
-                  <span class="stat-count">2+</span>
+                <div class="stat-item exp-year-item">
+                  <span class="stat-count years-count">2+</span>
                   <span class="stat-label">Years of Experience</span>
                 </div>
 
@@ -226,17 +246,17 @@
           <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
             About Me
           </h2>          <div class="about-content">
-            <div class="row" style="display: flex; flex-wrap: wrap">
+            <div class="row about-row">
 
               <!-- Left column - Existing content -->
-              <div class="col" style="flex: 1; min-width: 300px">
+              <div class="col about-col">
                 <div class="about-text">
                   <div class="about-bio">
                     <h3 data-aos="fade-up">
-                      Software Engineer & Web Developer
+                      Software Engineer | Web Application Developer
                     </h3>
-                    <p data-aos="fade-up" data-aos-delay="200">
-                      Results-driven Software Engineer with 2+ years of
+                    <p data-aos="fade-up" data-aos-delay="200" class="experience-description">
+                      Results-driven Software Engineer with <span class="dynamic-years">2+</span> years of
                       experience in CRM/SaaS application development. Expert in
                       Node.js, Vue.js, and MongoDB, with a strong record of
                       optimizing performance, reducing costs, and ensuring data
@@ -346,15 +366,101 @@
                     </div>
                   </div>
 
-                  <div class="cta-container">
+                  <div class="cta-container" >
                     <a
-                      href="https://drive.google.com/file/d/1QhU2075UMWDa81MEFdzHTu4W2jWPcY83/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1wud-FJs2qOKYPBC1pqrIfHuP6o_2Esld/view?usp=drive_link"
                       download
                       target="_blank"
                       class="cta-btn"
+                      style="justify-content: center;"
                     >
                       <i class="fas fa-eye"></i> View Resume
                     </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Right column - Resume Content -->
+              <div class="col resume-col" data-aos="fade-up" data-aos-delay="300">
+                <div class="resume-content">
+                  <!-- Education -->
+                  <div class="resume-section" data-aos="fade-up" data-aos-delay="400">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="education-item">
+                      <h4>Bachelor of Engineering (BE) in Electrical and Electronics Engineering</h4>
+                      <p class="institution">Sri Krishna College of Technology</p>
+                      <p class="duration">2019 - 2023</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Areas of Expertise -->
+                  <div class="resume-section" data-aos="fade-up" data-aos-delay="600">
+                    <h3><i class="fas fa-star"></i> Areas of Expertise</h3>
+                    <div class="expertise-area">
+                      <div class="expertise-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Performance Optimization</span>
+                      </div>
+                      <div class="expertise-item">
+                        <i class="fas fa-database"></i>
+                        <span>Database Design & Indexing</span>
+                      </div>
+                      <div class="expertise-item">
+                        <i class="fas fa-stream"></i>
+                        <span>Real-time Data Processing</span>
+                      </div>
+                      <div class="expertise-item">
+                        <i class="fas fa-cubes"></i>
+                        <span>Microservices Architecture</span>
+                      </div>
+                      <div class="expertise-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Authentication Systems</span>
+                      </div>
+                      <div class="expertise-item">
+                        <i class="fas fa-users"></i>
+                        <span>Team Leadership</span>
+                      </div>
+                      <div class="expertise-item">
+                        <i class="fas fa-search"></i>
+                        <span>Advanced Search Solutions</span>
+                      </div>
+                      <div class="expertise-item">
+                        <i class="fas fa-cloud"></i>
+                        <span>Cloud Infrastructure</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Quick Stats -->
+                  <div class="resume-section" data-aos="fade-up" data-aos-delay="700">
+                    <h3><i class="fas fa-chart-line"></i> Professional Highlights</h3>
+                    <div class="quick-stats">
+                      <div class="stat-box">
+                        <div class="stat-number">95<span>%</span></div>
+                        <div class="stat-label">Data Loss Reduction</div>
+                      </div>
+                      <div class="stat-box">
+                        <div class="stat-number">60<span>%</span></div>
+                        <div class="stat-label">Query Speed Improvement</div>
+                      </div>
+                      <div class="stat-box">
+                        <div class="stat-number">99.9<span>%</span></div>
+                        <div class="stat-label">System Uptime</div>
+                      </div>
+                      <div class="stat-box">
+                        <div class="stat-number">40<span>%</span></div>
+                        <div class="stat-label">Cost Optimization</div>
+                      </div>
+                      <div class="stat-box">
+                        <div class="stat-number">3<span>x</span></div>
+                        <div class="stat-label">Development Speed</div>
+                      </div>
+                      <div class="stat-box">
+                        <div class="stat-number">5<span>+</span></div>
+                        <div class="stat-label">Microservices Architected</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -375,11 +481,15 @@
           <div class="skills-header">
             <div class="skills-text" data-aos="fade-up" data-aos-delay="300">
               <p>
-                As a software engineer, I've developed expertise in various
-                technologies with a focus on creating performant, scalable web
-                applications.
+                As a software engineer, I've developed expertise in various technologies with a focus on creating 
+                performant, scalable web applications. My technical journey spans from 
+                <span class="highlighted-tech">frontend development</span> with Vue.js to 
+                <span class="highlighted-tech">backend architecture</span> with Node.js and MongoDB, enabling me 
+                to deliver end-to-end solutions that prioritize both user experience and system performance.
               </p>
-            </div>          </div>
+            </div>
+            <div class="skills-divider" data-aos="fade-up" data-aos-delay="350"></div>
+          </div>
           <div class="skills-content">
             <div class="skills-container">
               <!-- First row with Frontend and Backend -->
@@ -505,7 +615,7 @@
                       </div>
                     </div> 
                     <div class="other-skills-content">
-                      <div class="skill-tag">Go</div>
+                      <div class="skill-tag">Golang</div>
                       <div class="skill-tag">gRPC</div>
                       <div class="skill-tag">GraphQL</div>
                       <div class="skill-tag">JWT</div>
@@ -768,12 +878,9 @@
             Certifications
           </h2>
 
-          <div class="certifications-container" style="display: block; visibility: visible; opacity: 1;">            <div
-              class="certifications-content"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; visibility: visible; opacity: 1;"
-            >
+          <div class="certifications-container">
+            <div class="certifications-content" data-aos="fade-up" data-aos-delay="300" style="display:grid;">
+              <!-- Certificate 1 -->
               <div class="project-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="project-details">
                   <h3><i class="fas fa-database"></i> MongoDB Atlas Search</h3>
@@ -785,18 +892,17 @@
                     <span>MongoDB</span>
                   </div>
                   <div class="certification-link">
-                    <a href="https://learn.mongodb.com/c/rtwsMAHnRCCUCvMKSisQAQ" target="_blank"
-                      ><i class="fas fa-external-link-alt"></i> View
-                      Certificate</a
-                    >
+                    <a href="https://learn.mongodb.com/c/rtwsMAHnRCCUCvMKSisQAQ" target="_blank">
+                      <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
                   </div>
                 </div>
               </div>
+              
+              <!-- Certificate 2 -->
               <div class="project-card" data-aos="fade-up" data-aos-delay="500">
                 <div class="project-details">
-                  <h3>
-                    <i class="fas fa-code-branch"></i> Advanced Queries with Atlas Search
-                  </h3>
+                  <h3><i class="fas fa-code-branch"></i> Advanced Queries with Atlas Search</h3>
                   <p><strong>Issuer:</strong> MongoDB University</p>
                   <p><strong>Date:</strong> July 2024</p>
                   <div class="project-tech">
@@ -805,36 +911,71 @@
                     <span>Text Search</span>
                   </div>
                   <div class="certification-link">
-                    <a href="https://learn.mongodb.com/c/smyeh3D3TvekSKMzcvxGlg" target="_blank"
-                      ><i class="fas fa-external-link-alt"></i> View
-                      Certificate</a
-                    >
+                    <a href="https://learn.mongodb.com/c/smyeh3D3TvekSKMzcvxGlg" target="_blank">
+                      <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
                   </div>
                 </div>
               </div>
+              
+              <!-- Certificate 3 -->
               <div class="project-card" data-aos="fade-up" data-aos-delay="600">
                 <div class="project-details">
                   <h3><i class="fas fa-cogs"></i> Managing Atlas Search Indexes</h3>
-                  <p><strong>Issuer:</strong> MongoDB University</p>
-                  <p><strong>Date:</strong> July 2024</p>
+                  <p style="margin-bottom:10px; display:flex; align-items:center;"><strong style="min-width:55px; display:inline-block; margin-right:5px;">Issuer:</strong> MongoDB University</p>
+                  <p style="margin-bottom:10px; margin-top:0; display:flex; align-items:center;"><strong style="min-width:55px; display:inline-block; margin-right:5px;">Date:</strong> July 2024</p>
                   <div class="project-tech">
                     <span>Index Management</span>
-                    <span>Performance Tuning</span>
                     <span>Search Optimization</span>
                   </div>
                   <div class="certification-link">
-                    <a href="https://learn.mongodb.com/c/C7X37IrARwOANN9_Zh6U0A" target="_blank"
-                      ><i class="fas fa-external-link-alt"></i> View
-                      Certificate</a
-                    >
+                    <a href="https://learn.mongodb.com/c/C7X37IrARwOANN9_Zh6U0A" target="_blank">
+                      <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Awards Section -->
+      <section id="awards" class="awards">
+        <div class="container">
+          <span class="section-subtitle" data-aos="fade-up"
+            >Recognition & Honors</span
+          >
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
+            Awards & Achievements
+          </h2>
+
+          <div class="awards-container">
+            <div class="awards-content" data-aos="fade-up" data-aos-delay="300">
+              <!-- Award 1 -->
+              <div class="project-card award-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-details">
+                  <h3><i class="fas fa-trophy"></i> Tech Trailblazer</h3>
+                  <p><strong>Presented By:</strong> CargoEZ</p>
+                  <p><strong>Date:</strong> 2024</p>
+                  <p class="award-description">
+                    Recognized for outstanding performance and technical excellence at the 2023–2024 Annual 
+                    General Meeting. This award acknowledges innovative solutions and exceptional contribution 
+                    to the company's technical growth.
+                  </p>
+                  <div class="project-tech">
+                    <span>Technical Excellence</span>
+                    <span>Innovation</span>
+                    <span>Leadership</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
       <!-- Projects Section - Redesigned with Categories -->
       <section id="projects" class="projects">
         <div class="container">
@@ -845,41 +986,7 @@
             Projects
           </h2>
 
-          <!-- Current Project Category -->
-          <!-- <div class="category-heading" data-aos="fade-up" data-aos-delay="300">
-            <i class="fas fa-briefcase"></i> Current Project
-          </div>
-          <div class="projects-content">
-            <div
-              class="project-card current-project"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="project-details">
-                <h3>
-                  CargoEZ
-                </h3>
-                <p>
-                  A modern SaaS platform for logistics and cargo management with enhanced security and performance features:
-                </p>
-                <ul class="project-highlights">
-                  <li><i class="fas fa-check-circle"></i> Designed and implemented authentication and role-based access using Node.js, JWT, OAuth 2.0, and Passport.js, improving user security and access control.</li>
-                  <li><i class="fas fa-check-circle"></i> Integrated MongoDB, Redis, and Confluent Kafka to enable real-time data processing and reporting, supporting seamless operations for logistics teams.</li>
-                  <li><i class="fas fa-check-circle"></i> Led migration to Vue.js 3 and optimized REST API endpoints, increasing application speed by 30% and reducing support tickets related to latency.</li>
-                </ul>
-                <div class="project-tech">
-                  <span>Vue.js</span>
-                  <span>Node.js</span>
-                  <span>Express</span>
-                  <span>MongoDB</span>
-                  <span>OAuth 2.0</span>
-                  <span>Kafka</span>
-                  <span>AJV</span>
-                  <span>Redis</span>
-                </div>
-              </div>
-            </div>
-          </div> -->
+          <!-- Current Projects Section -->
 
           <!-- Training Projects Category -->
           <div class="category-heading" data-aos="fade-up">
@@ -890,17 +997,17 @@
               <div class="project-details">
                 <h3>Employee Management System</h3>
                 <p>
-                  A role-based application built during training that
-                  demonstrates HR process management capabilities including
-                  attendance tracking, performance reviews, and document
-                  management.
+                  Developed a comprehensive role-based Employee Management application 
+                  with secure authentication and authorization. The system includes user management, 
+                  role-based access control, employee profiles and document management features.
                 </p>
                 <div class="project-tech">
                   <span>Vue.js</span>
                   <span>Node.js</span>
-                  <span>Express</span>
-                  <span>MongoDB</span>
+                  <span>Express.js</span>
                   <span>JWT</span>
+                  <span>MongoDB</span>
+                  <span>Role-based Access Control</span>
                 </div>
               </div>
             </div>
@@ -908,12 +1015,13 @@
               <div class="project-details">
                 <h3>Gmail Simulation App</h3>
                 <p>
-                  A web application that replicates core Gmail functionality to
-                  demonstrate UI/UX skills and backend integration. Features
-                  include message threading, search, drafts, and categories.
+                  A sophisticated web application built with Vue.js and Element Plus UI framework that replicates 
+                  core Gmail functionality with a modern interface. 
+                  <!-- Gg experience. -->
                 </p>
                 <div class="project-tech">
                   <span>Vue.js</span>
+                  <span>Element Plus</span>
                   <span>Vuex</span>
                   <span>Node.js</span>
                   <span>MongoDB</span>
@@ -922,11 +1030,11 @@
             </div>
             <div class="project-card" data-aos="fade-up" data-aos-delay="600">
               <div class="project-details">
-                <h3>Cargo Tracking Portal</h3>
+                <h3>CargoEZ - OAuth & Real-time Tracking Portal</h3>
                 <p>
-                  A shipment tracking portal with user authentication and
-                  real-time updates. Implemented OAuth 2.0 for streamlined login
-                  and MongoDB Change Streams for status updates.
+                  Integrated OAuth 2.0 (Google, Microsoft, Facebook) with Passport.js for CargoEZ Portal, 
+                  reducing user login time by 60%. Created a shipment tracking portal with real-time 
+                  updates using MongoDB Change Streams for status notifications.
                 </p>
                 <div class="project-tech">
                   <span>Node.js</span>
@@ -1043,8 +1151,9 @@
     <script src="assets/js/skill-percentage-fix.js"></script>
     <!-- Fix for animation overlap between sections -->
     <script src="assets/js/scroll-animation-fix.js"></script>
-    <!-- Mobile Menu Toggle Script -->
-    <script src="assets/js/mobile-menu.js"></script>
+    <!-- Mobile Menu Toggle Script - Updated with Fix -->
+    <script src="assets/js/mobile-menu-fix.js"></script>
+    <link rel="stylesheet" href="assets/css/mobile-menu-fix.css">
     <!-- Skill Style Cleanup -->
     <script src="assets/js/skill-style-cleanup.js"></script>
     <!-- Animated Job Title Script -->
@@ -1082,5 +1191,9 @@
     
     <!-- Modern Custom Cursor & Loader Script -->
     <script src="assets/js/cursor-loader.js"></script>
+    
+    <!-- Smooth Counter Animation Script -->
+    <script src="assets/js/counter-smooth-animation.js"></script>
+    <script src="assets/js/certificate-equalizer.js"></script>
   </body>
 </html>

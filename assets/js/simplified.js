@@ -3,7 +3,8 @@
 // Wait until DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   initNavbar();
-  initMobileMenu();
+  // Mobile menu is now handled by mobile-menu-fix.js
+  // initMobileMenu();
   initScrollAnimation();
   initFormValidation();
   initCounterAnimation();

@@ -1,0 +1,30 @@
+/* Mobile Menu Button Display Fix */
+/* Hide mobile menu button on desktop and show only on mobile */
+.mobile-menu-btn {
+  display: none !important; /* Default hide on all screens */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* Show mobile menu button only on mobile screens */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex !important; /* Show on mobile screens */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1010;
+    outline: none;
+  }
+}
